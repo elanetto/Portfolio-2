@@ -1,4 +1,4 @@
-import star from './../../../public/star.png';
+import star from './../../assets/star.png';
 
 
 export function Header() {

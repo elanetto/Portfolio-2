@@ -1,4 +1,4 @@
-PS: This is a plcaholder ReadMe to get started. The readme here is a copy-paste from my old Portfolio:
+PS: This is a placeholder ReadMe to get started. The readme here is a copy-paste from my old Portfolio:
 
 # My Portfolio
 

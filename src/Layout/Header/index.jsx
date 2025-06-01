@@ -1,14 +1,11 @@
-import star from './../../assets/star.png';
-
+import logo from './../../assets/logo/at_logo.png';
 
 export function Header() {
-
   return (
-    <header className="w-full bg-pink-500">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between relative text-white">
-        <img src={star} alt="star" className='h-20 w-20' />
+    <header className="w-full flex justify-center">
+      <div className="w-full max-w-[1500px] py-6 px-4 md:px-2 flex justify-between items-center text-green-900">
+        <img src={logo} alt="Logo for Anette Therese" className="h-12" />
         <p>This is the header</p>
-          
       </div>
     </header>
   );

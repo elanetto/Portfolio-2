@@ -1,8 +1,29 @@
-export function ProductCard() {
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
+function ProductCard({ title, description, image, hoverImage, link }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="w-42 h-42 bg-pink-600 rounded-2xl">
-      <h2>Hello</h2>
-      <p>This is a profuct card</p>
-    </div>
+    <Link
+      to={link}
+      className="bg-white rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 w-full md:w-[470px]"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative h-60 w-full">
+        <img
+          src={isHovered ? hoverImage : image}
+          alt={title}
+          className="h-full w-full object-cover transition-opacity duration-300"
+        />
+      </div>
+      <div className="p-4 text-dark-green">
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-sm leading-relaxed">{description}</p>
+      </div>
+    </Link>
   );
 }
+
+export default ProductCard;

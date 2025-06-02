@@ -13,8 +13,8 @@ function InfoCards() {
           <p>
             5 års erfaring innen{" "}
             <span className="font-bold">Digital Markedsføring</span>, Art
-            Directio og Grafisk Design. Har jobbet med sosiale medier, photo og
-            å lage content for nettsider.
+            Direction og Grafisk Design. Har jobbet med sosiale medier, foto, og
+            å lage innhold for nettsider.
           </p>
         </div>
       </div>
@@ -27,8 +27,8 @@ function InfoCards() {
         <div className="px-6 py-3">
           <p>
             6 års erfaring som <span className="font-bold">lektor</span>, både
-            som Høyskolelektor innen medier, og kontaktlærer, trinnkoordinatior
-            og IKT ansvarlig på ungsomsskolen
+            som Høyskolelektor innen medier, og kontaktlærer, trinnkoordinator
+            og IKT ansvarlig på ungdomsskolen
           </p>
         </div>
       </div>
@@ -40,8 +40,10 @@ function InfoCards() {
         </div>
         <div className="px-6 py-3">
           <p>
-            Master i <span className="font-bold">Digitale Medier</span>, Bachelor i Reklame og Kommunikkajson, 2-åring utanning som{" "}
-            <span className="font-bold">FrontEnd Developer</span> og årsstudier i Engelsk og PPU.
+            Master i <span className="font-bold">Digitale Medier</span>,
+            Bachelor i Reklame og Kommunikasjon, 2-åring utdanning som{" "}
+            <span className="font-bold">FrontEnd Developer</span> og årsstudier
+            i Engelsk og PPU.
           </p>
         </div>
       </div>

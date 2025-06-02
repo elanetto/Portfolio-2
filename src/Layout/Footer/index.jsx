@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-espressoy bg-pink-500 text-white w-full py-12 px-4 sm:px-8">
+    <footer className="bg-espressoy bg-dark-green text-white w-full py-12 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10">
         {/* Logo & Description */}
         <div className="space-y-4">

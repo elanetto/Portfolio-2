@@ -21,14 +21,14 @@ function ProductList() {
           link="/portfolio/holidaze"
         />
         <ProductCard
-          title="Frontend Notes"
+          title="eShop"
           description={lorem}
           image={PlaceHolderImg}
           hoverImage={PlaceHolderImgHover}
           link="/portfolio/frontend-notes"
         />
         <ProductCard
-          title="Design System"
+          title="Auction House"
           description={lorem}
           image={PlaceHolderImg}
           hoverImage={PlaceHolderImgHover}

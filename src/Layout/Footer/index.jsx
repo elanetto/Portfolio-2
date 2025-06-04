@@ -18,7 +18,7 @@ export function Footer() {
           <p className="text-sm text-creamy/80">Dette er min portfolio</p>
           <p className="text-sm text-creamy/80">
             Denne nettsiden er et Vite React prosjekt med Tailwind, Javascript
-            og HTML5. Prosjektet er bygd opp i komponeneter og kodet i Visual
+            og HTML5. Prosjektet er bygd opp i komponenter og kodet i Visual
             Studio Code.
           </p>
           <p className="flex gap-4 text-2xl pt-4">

@@ -4,6 +4,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Layout from "./Layout";
+import Holidaze from "./Pages/Portfolio/Holidaze";
 
 const router = createBrowserRouter([
   {
@@ -12,12 +13,18 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <App /> },
       { path: "home", element: <App /> },
-          ],
+
+      // Portfolio pages:
+      {
+        path: "holidaze",
+        element: <Holidaze />,
+      },
+    ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
-    <StrictMode>
-      <RouterProvider router={router} />
-    </StrictMode>
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
 );

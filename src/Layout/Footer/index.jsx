@@ -1,3 +1,13 @@
+// import { FaReact } from "react-icons/fa";
+// import { SiJavascript } from "react-icons/si";
+// import { FaHtml5 } from "react-icons/fa";
+// import { SiTailwindcss } from "react-icons/si";
+// import { SiVite } from "react-icons/si";
+// import { FaGithub } from "react-icons/fa";
+// import { FaCode } from "react-icons/fa";
+// import TooltipWrapper from "../../components/TooltipWrapper";
+import TechIcons from "./../../components/Icons/TechIcons";
+
 export function Footer() {
   return (
     <footer className="bg-espressoy bg-dark-green text-white w-full py-12 px-4 sm:px-8">
@@ -5,21 +15,26 @@ export function Footer() {
         {/* Logo & Description */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">Anette Therese Lindberg</h2>
+          <p className="text-sm text-creamy/80">Dette er min portfolio</p>
           <p className="text-sm text-creamy/80">
-            Dette er min portfolio
+            Denne nettsiden er et Vite React prosjekt med Tailwind, Javascript
+            og HTML5. Prosjektet er bygd opp i komponenter og kodet i Visual
+            Studio Code.
           </p>
-          <p className="text-sm text-creamy/80">
-            View all images used, and where they are from:
-          </p>
-          <p>
-            <a
-              href="https://husky-koi-ce1.notion.site/Photos-1f59e712ff828040b6b4fcd0d1ef3a34"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline hover:text-sunny inline-flex items-center gap-1"
-            >
-              Images used
-            </a>
+          <p className="flex gap-4 text-2xl pt-4">
+            <TechIcons.vite />
+
+            <TechIcons.react />
+
+            <TechIcons.tailwind />
+
+            <TechIcons.javascript />
+
+            <TechIcons.html5 />
+
+            <TechIcons.github />
+
+            <TechIcons.vscode />
           </p>
         </div>
 
@@ -66,7 +81,10 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="mt-10 pt-6 border-t border-creamy/20 text-sm text-center text-creamy/60">
-        <p>© {new Date().getFullYear()} Anette Therese Lindberg. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Anette Therese Lindberg. All rights
+          reserved.
+        </p>
         <p className="italic text-xs">Hvorfor titter du her? 👀</p>
       </div>
     </footer>

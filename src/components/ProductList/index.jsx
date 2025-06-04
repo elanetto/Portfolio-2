@@ -18,21 +18,21 @@ function ProductList() {
           description={lorem}
           image={PlaceHolderImg}
           hoverImage={PlaceHolderImgHover}
-          link="/portfolio/holidaze"
+          link="/holidaze"
         />
         <ProductCard
           title="eShop"
           description={lorem}
           image={PlaceHolderImg}
           hoverImage={PlaceHolderImgHover}
-          link="/portfolio/frontend-notes"
+          link="/holidaze"
         />
         <ProductCard
           title="Auction House"
           description={lorem}
           image={PlaceHolderImg}
           hoverImage={PlaceHolderImgHover}
-          link="/portfolio/design-system"
+          link="/holidaze"
         />
       </div>
     </>

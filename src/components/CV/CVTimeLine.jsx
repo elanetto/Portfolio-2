@@ -69,28 +69,27 @@ export default function CVTimeline() {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-18 md:px-4">
-        {/* Section Title */}
         <h2 className="text-center text-4xl font-bold mb-16 tracking-widest text-creamy">
           ERFARING
         </h2>
 
-        {/* Timeline container with animated line */}
-        <motion.div
-          ref={ref}
-          initial={{ height: 0 }}
-          animate={isInView ? { height: "100%" } : {}}
-          transition={{ duration: 3, ease: "easeOut" }}
-          className="relative md:before:content-[''] md:before:absolute md:before:left-1/2 md:before:top-0 md:before:bottom-0 md:before:w-1 md:before:bg-green-500"
-        >
+        <div ref={ref} className="relative">
+          {/* Animated vertical line */}
+          <motion.div
+            initial={{ height: 0 }}
+            animate={isInView ? { height: "100%" } : {}}
+            transition={{ duration: 2, ease: "easeOut" }}
+            className="absolute left-1/2 top-0 w-1 bg-green-500 hidden md:block"
+            style={{ transform: "translateX(-50%)" }}
+          />
+
           {experiences.map((exp, index) => (
             <div
               key={index}
               className="relative flex flex-col md:flex-row items-center mb-16"
             >
-              {/* Left side content */}
               {index % 2 === 0 ? (
                 <>
-                  {/* Content left */}
                   <div className="w-full md:w-1/2 pr-0 md:pr-8 text-left md:text-right">
                     <p className="text-green-400 font-bold text-sm">
                       {exp.year}
@@ -102,35 +101,30 @@ export default function CVTimeline() {
                     </p>
                   </div>
 
-                  {/* Dot */}
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
-                    transition={{ delay: 0.2, duration: 0.4 }}
-                    className="hidden md:flex relative z-10 w-10 left-0.5 bottom-18 justify-center"
+                    transition={{ delay: 0.4, duration: 1 }}
+                    className="hidden md:flex relative z-10 w-10 left-0.9 bottom-18 justify-center"
                   >
                     <div className="w-6 h-6 bg-green-500 rounded-full" />
                   </motion.div>
 
-                  {/* Right spacer */}
                   <div className="hidden md:block w-full md:w-1/2" />
                 </>
               ) : (
                 <>
-                  {/* Left spacer */}
                   <div className="hidden md:block w-full md:w-1/2" />
 
-                  {/* Dot */}
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
-                    transition={{ delay: 0.2, duration: 0.4 }}
-                    className="hidden md:flex relative z-10 w-10 left-0.5 bottom-16 justify-center"
+                    transition={{ delay: 0.4, duration: 1 }}
+                    className="hidden md:flex relative z-10 w-10 left-0.6 bottom-16 justify-center"
                   >
                     <div className="w-6 h-6 bg-green-500 rounded-full" />
                   </motion.div>
 
-                  {/* Content right */}
                   <div className="w-full md:w-1/2 pl-0 md:pl-8 text-left">
                     <p className="text-green-400 font-bold text-sm">
                       {exp.year}
@@ -145,7 +139,7 @@ export default function CVTimeline() {
               )}
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

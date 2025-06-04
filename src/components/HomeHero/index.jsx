@@ -20,18 +20,33 @@ function HomeHero() {
 
   return (
     <div
-      className="h-[500px] w-full text-white bg-pink-900/30 p-4 rounded-xl shadow-lg bg-cover flex items-center"
+      className="h-[400px] text-white bg-pink-900/30 p-4 rounded-xl shadow-lg bg-cover flex m-2 items-center"
       style={{
         backgroundImage: `url(${bgImage})`,
-        backgroundPosition: isMobile ? "5% center" : "center",
+        backgroundPosition: isMobile ? "30% center" : "center",
       }}
     >
-      <div className="w-full p-8 md:p-24 text-left max-w-[800px]">
-        <h2 className="text-4xl md:text-6xl font-bold text-shadow">
-          FrontEnd Developer
+      <div className="pl-1 md:p-24 text-left max-w-[800px]">
+        <h2 className="text-3xl md:text-6xl font-bold text-shadow">
+          {isMobile ? (
+            <>
+              FrontEnd<br />
+              Developer
+            </>
+          ) : (
+            "FrontEnd Developer"
+          )}
         </h2>
         <p className="text-2xl md:text-4xl text-shadow">
-          Anette Therese Lindberg
+          {isMobile ? (
+            <>
+              Anette<br />
+              Therese<br />
+              Lindberg
+            </>
+          ) : (
+            "Anette Therese Lindberg"
+          )}
         </p>
       </div>
     </div>

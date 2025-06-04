@@ -16,10 +16,10 @@ function InfoCards() {
     <div className="flex flex-col md:flex-row md:justify-between mt-8 gap-4">
       {/* Card 1 */}
       <div
-        className="text-white p-4 rounded-2xl flex w-full md:w-[470px] transform transition-transform duration-300 hover:scale-110 shadow-lg"
+        className="text-white p-4 rounded-2xl flex m-2 md:w-[470px] transform transition-transform duration-300 hover:scale-110 shadow-lg"
         style={baseStyle(backgroundImage1)}
       >
-        <div className="w-24 h-24 flex items-center justify-center md:pt-5">
+        <div className="w-24 h-24 flex items-center justify-center pt-20 md:pt-5">
           <MdLooks5 className="text-8xl text-creamy" />
         </div>
         <div className="px-6 py-3">
@@ -34,10 +34,10 @@ function InfoCards() {
 
       {/* Card 2 */}
       <div
-        className="text-white p-4 rounded-2xl flex w-full md:w-[470px] transform transition-transform duration-300 hover:scale-110 shadow-lg"
+        className="text-white p-4 rounded-2xl flex m-2 md:w-[470px] transform transition-transform duration-300 hover:scale-110 shadow-lg"
         style={baseStyle(backgroundImage2)}
       >
-        <div className="w-24 h-24 flex items-center justify-center md:pt-5">
+        <div className="w-24 h-24 flex items-center justify-center pt-20 md:pt-5">
           <MdLooks6 className="text-8xl text-creamy" />
         </div>
         <div className="px-6 py-3">
@@ -51,10 +51,10 @@ function InfoCards() {
 
       {/* Card 3 */}
       <div
-        className="text-white p-4 rounded-2xl flex w-full md:w-[470px] transform transition-transform duration-300 hover:scale-110 shadow-lg"
+        className="text-white p-4 rounded-2xl flex m-2 md:w-[470px] transform transition-transform duration-300 hover:scale-110 shadow-lg"
         style={baseStyle(backgroundImage3)}
       >
-        <div className="w-24 h-24 flex items-center justify-center md:pt-5">
+        <div className="w-24 h-24 flex items-center justify-center pt-20 md:pt-5">
           <FaGraduationCap className="text-8xl text-creamy" />
         </div>
         <div className="px-6 py-3">

@@ -1,11 +1,17 @@
+// eslint-disable-next-line no-unused-vars
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import backgroundImage from "../../assets/images/anette-goldsmiths-wow.jpg";
 
 export default function CVTimeline() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const experiences = [
     {
       year: "2018 - 2023",
       title: "BAKKELØKKA UNGDOMSSKOLE",
-      role: "Lærer og IKT-ansvarlig",
+      role: "Lektor, Trinnkoordinator, Kontaktlærer og IKT-ansvarlig",
       description:
         "Lærer i Medier og Engelsk. IKT-ansvarlig for hele skolen. Lærer elevene å formidle valgte budskap gjennom gode tekster, design, video og bilder.",
     },
@@ -19,7 +25,7 @@ export default function CVTimeline() {
     {
       year: "2014 - 2015",
       title: "HØYSKOLEN I NESNA",
-      role: "Høyskolelektor og studieansvarlig",
+      role: "Høyskolelektor og Studieansvarlig",
       description:
         "Jobbet som studieansvarlig for årsstudiet Digitale Medier ved Campus Helgeland. Var lærer i dagene Idéutvikling, Grafisk Design, Foto og Sosiale Medier.",
     },
@@ -59,26 +65,32 @@ export default function CVTimeline() {
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(108, 118, 74, 0.9), rgba(32, 19, 9, 0.9)), url(${backgroundImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "45% center",
       }}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-18 md:px-4">
         {/* Section Title */}
         <h2 className="text-center text-4xl font-bold mb-16 tracking-widest text-creamy">
-          03 ERFARING
+          ERFARING
         </h2>
 
-        {/* Timeline Container */}
-        <div className="relative md:before:absolute md:before:left-1/2 md:before:top-0 md:before:bottom-0 md:before:w-1 md:before:bg-green-500">
+        {/* Timeline container with animated line */}
+        <motion.div
+          ref={ref}
+          initial={{ height: 0 }}
+          animate={isInView ? { height: "100%" } : {}}
+          transition={{ duration: 3, ease: "easeOut" }}
+          className="relative md:before:content-[''] md:before:absolute md:before:left-1/2 md:before:top-0 md:before:bottom-0 md:before:w-1 md:before:bg-green-500"
+        >
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`relative flex flex-col md:flex-row items-center mb-16`}
+              className="relative flex flex-col md:flex-row items-center mb-16"
             >
-              {/* Desktop: Left side */}
+              {/* Left side content */}
               {index % 2 === 0 ? (
                 <>
-                  {/* Content Left (or full width on mobile) */}
+                  {/* Content left */}
                   <div className="w-full md:w-1/2 pr-0 md:pr-8 text-left md:text-right">
                     <p className="text-green-400 font-bold text-sm">
                       {exp.year}
@@ -90,25 +102,35 @@ export default function CVTimeline() {
                     </p>
                   </div>
 
-                  {/* Dot (hidden on mobile) */}
-                  <div className="hidden md:flex relative z-10 w-10 left-0.5 bottom-18 justify-center">
-                    <div className="w-6 h-6 bg-green-500 rounded-full"></div>
-                  </div>
+                  {/* Dot */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={isInView ? { scale: 1 } : {}}
+                    transition={{ delay: 0.2, duration: 0.4 }}
+                    className="hidden md:flex relative z-10 w-10 left-0.5 bottom-18 justify-center"
+                  >
+                    <div className="w-6 h-6 bg-green-500 rounded-full" />
+                  </motion.div>
 
-                  {/* Empty Right */}
+                  {/* Right spacer */}
                   <div className="hidden md:block w-full md:w-1/2" />
                 </>
               ) : (
                 <>
-                  {/* Empty Left */}
+                  {/* Left spacer */}
                   <div className="hidden md:block w-full md:w-1/2" />
 
-                  {/* Dot (hidden on mobile) */}
-                  <div className="hidden md:flex relative z-10 w-10 left-0.5 bottom-16 justify-center">
-                    <div className="w-6 h-6 bg-green-500 rounded-full"></div>
-                  </div>
+                  {/* Dot */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={isInView ? { scale: 1 } : {}}
+                    transition={{ delay: 0.2, duration: 0.4 }}
+                    className="hidden md:flex relative z-10 w-10 left-0.5 bottom-16 justify-center"
+                  >
+                    <div className="w-6 h-6 bg-green-500 rounded-full" />
+                  </motion.div>
 
-                  {/* Content Right (or full width on mobile) */}
+                  {/* Content right */}
                   <div className="w-full md:w-1/2 pl-0 md:pl-8 text-left">
                     <p className="text-green-400 font-bold text-sm">
                       {exp.year}
@@ -123,7 +145,7 @@ export default function CVTimeline() {
               )}
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

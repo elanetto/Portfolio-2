@@ -14,15 +14,23 @@ function ProductCard({ title, description, image, hoverImage, link, icons = [] }
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative h-60 w-full">
-        {isHovered && isVideo ? (
-          <video
-            src={hoverImage}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-full w-full object-cover"
-          />
+        {isHovered && hoverImage ? (
+          isVideo ? (
+            <video
+              src={hoverImage}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <img
+              src={hoverImage}
+              alt={`${title} hover preview`}
+              className="h-full w-full object-cover transition-opacity duration-300"
+            />
+          )
         ) : (
           <img
             src={image}
@@ -36,7 +44,7 @@ function ProductCard({ title, description, image, hoverImage, link, icons = [] }
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-sm leading-relaxed mb-2">{description}</p>
 
-        {/* Icon row */}
+        {/* Tech icons row */}
         {icons.length > 0 && (
           <div className="flex gap-2 text-xl text-dark-green">
             {icons.map((IconComponent, index) => (

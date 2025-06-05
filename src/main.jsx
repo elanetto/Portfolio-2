@@ -6,6 +6,7 @@ import App from "./App";
 import Layout from "./Layout";
 import Holidaze from "./Pages/Portfolio/Holidaze";
 import AuctionHouse from "./Pages/Portfolio/AuctionHouse";
+import Nettbutikk from "./Pages/Portfolio/eShop";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
       {
         path: "auction",
         element: <AuctionHouse />,
-      }
+      },
+      {
+        path: "eshop",
+        element: <Nettbutikk />,
+      },
     ],
   },
 ]);

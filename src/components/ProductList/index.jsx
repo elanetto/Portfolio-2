@@ -38,7 +38,7 @@ function ProductList() {
           description={lorem}
           image={AuctionHouseImg}
           hoverImage={AuctionHouseHover}
-          link="/auctionhouse"
+          link="/auction"
           icons={[
             TechIcons.github,
             TechIcons.vite,

@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         element: <Holidaze />,
       },
       {
-        path: "auctionhouse",
+        path: "auction",
         element: <AuctionHouse />,
       }
     ],

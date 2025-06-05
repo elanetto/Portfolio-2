@@ -26,3 +26,4 @@ function Holidaze() {
 }
 
 export default Holidaze;
+

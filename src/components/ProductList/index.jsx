@@ -1,10 +1,20 @@
-// src/components/ProductList.jsx
 import ProductCard from "./../ProductCard";
-import PlaceHolderImg from "../../assets/portfolio/card/placeholder_portfolio_card.png";
-import PlaceHolderImgHover from "../../assets/portfolio/gif/frontend_notes_frontpage.gif";
+import TechIcons from "./../Icons/TechIcons";
+import HolidazeImg from "../../assets/portfolio/card/Holidaze-1.jpg";
+import HolidazeHover from "../../assets/portfolio/card/Holidaze-hover-video.mp4";
+import AuctionHouseImg from "../../assets/portfolio/card/AuctionHouse-1.jpg";
+import AuctionHouseHover from "../../assets/portfolio/card/AuctionHouseVideo-hover.mp4";
+import eShopImg from "../../assets/portfolio/card/eshop-1.jpg";
+import eShopHover from "../../assets/portfolio/card/eShop-video-hover.mp4";
 
-const lorem =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non dolor vel nulla facilisis tristique. Praesent vehicula turpis nec.";
+const holidazeText = 
+    "En booking nettide: Søk, book eller legg ut dine egne venues. Skoleoppgave i Frontendutvikling på Noroff. Nettsiden bruker en API.";
+
+const auctionHouseText = 
+    "En auksjonsnettside hvor man kan søke, by på og delta på auksjoner. Man kan også legge ut egne produkter. API fra Noroff. Skoleoppgave.";
+
+const eShopText =
+    "En enkel e-handelsnettsted hvor man kan søke etter produkter og kjøpe dem. Skoleoppgave med en gitt API fra Noroff.";
 
 function ProductList() {
   return (
@@ -15,24 +25,41 @@ function ProductList() {
       <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center mx-auto mt-4 mb-24 max-w-[1200px]">
         <ProductCard
           title="Holidaze"
-          description={lorem}
-          image={PlaceHolderImg}
-          hoverImage={PlaceHolderImgHover}
+          description={holidazeText}
+          image={HolidazeImg}
+          hoverImage={HolidazeHover}
           link="/holidaze"
-        />
-        <ProductCard
-          title="eShop"
-          description={lorem}
-          image={PlaceHolderImg}
-          hoverImage={PlaceHolderImgHover}
-          link="/holidaze"
+          icons={[
+            TechIcons.github,
+            TechIcons.vite,
+            TechIcons.react,
+            TechIcons.javascript,
+            TechIcons.tailwind,
+            TechIcons.html5,
+          ]}
         />
         <ProductCard
           title="Auction House"
-          description={lorem}
-          image={PlaceHolderImg}
-          hoverImage={PlaceHolderImgHover}
-          link="/holidaze"
+          description={auctionHouseText}
+          image={AuctionHouseImg}
+          hoverImage={AuctionHouseHover}
+          link="/auction"
+          icons={[
+            TechIcons.github,
+            TechIcons.vite,
+            TechIcons.react,
+            TechIcons.javascript,
+            TechIcons.tailwind,
+            TechIcons.html5,
+          ]}
+        />
+        <ProductCard
+          title="eShop"
+          description={eShopText}
+          image={eShopImg}
+          hoverImage={eShopHover}
+          link="/eshop"
+          icons={[TechIcons.html5, TechIcons.javascript, TechIcons.tailwind]}
         />
       </div>
     </>

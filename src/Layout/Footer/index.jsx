@@ -1,11 +1,3 @@
-// import { FaReact } from "react-icons/fa";
-// import { SiJavascript } from "react-icons/si";
-// import { FaHtml5 } from "react-icons/fa";
-// import { SiTailwindcss } from "react-icons/si";
-// import { SiVite } from "react-icons/si";
-// import { FaGithub } from "react-icons/fa";
-// import { FaCode } from "react-icons/fa";
-// import TooltipWrapper from "../../components/TooltipWrapper";
 import TechIcons from "./../../components/Icons/TechIcons";
 
 export function Footer() {

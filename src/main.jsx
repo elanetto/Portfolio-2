@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Layout from "./Layout";
 import Holidaze from "./Pages/Portfolio/Holidaze";
+import AuctionHouse from "./Pages/Portfolio/AuctionHouse";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         path: "holidaze",
         element: <Holidaze />,
       },
+      {
+        path: "auctionhouse",
+        element: <AuctionHouse />,
+      }
     ],
   },
 ]);

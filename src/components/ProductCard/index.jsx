@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function ProductCard({ title, description, image, hoverImage, link }) {
+function ProductCard({ title, description, image, hoverImage, link, icons = [] }) {
   const [isHovered, setIsHovered] = useState(false);
+
+  const isVideo = hoverImage && hoverImage.endsWith(".mp4");
 
   return (
     <Link
@@ -12,15 +14,36 @@ function ProductCard({ title, description, image, hoverImage, link }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative h-60 w-full">
-        <img
-          src={isHovered ? hoverImage : image}
-          alt={title}
-          className="h-full w-full object-cover transition-opacity duration-300"
-        />
+        {isHovered && isVideo ? (
+          <video
+            src={hoverImage}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover transition-opacity duration-300"
+          />
+        )}
       </div>
+
       <div className="p-4 text-dark-green">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-sm leading-relaxed">{description}</p>
+        <p className="text-sm leading-relaxed mb-2">{description}</p>
+
+        {/* Icon row */}
+        {icons.length > 0 && (
+          <div className="flex gap-2 text-xl text-dark-green">
+            {icons.map((IconComponent, index) => (
+              <span key={index}>{<IconComponent />}</span>
+            ))}
+          </div>
+        )}
       </div>
     </Link>
   );

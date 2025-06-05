@@ -8,8 +8,48 @@
   --color-pine-green: #72813F;
   --color-leaf-green: #9EAF66;
   --color-light-green: #D8E4AE;
+  --color-background: #D0CEDA;
 }
 
 .text-shadow {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* image carousel */
+
+.carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  top: 50% !important;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 2;
+}
+
+.carousel .control-prev.control-arrow {
+  left: 15px;
+  margin: 0.5rem;
+}
+
+.carousel .control-next.control-arrow {
+  right: 15px;
+  margin: 0.5rem;
+}
+
+/* Restore the arrow icons (you were hiding them by mistake) */
+.carousel .control-prev.control-arrow:before,
+.carousel .control-next.control-arrow:before {
+  display: inline-block !important;
+}
+
+/* Optional: adjust hover state */
+.carousel .control-arrow:hover {
+  background: rgba(0, 0, 0, 0.7) !important;
 }

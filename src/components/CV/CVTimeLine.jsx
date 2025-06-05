@@ -105,7 +105,7 @@ export default function CVTimeline() {
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ delay: 0.4, duration: 1 }}
-                    className="hidden md:flex relative z-10 w-10 left-0.9 bottom-18 justify-center"
+                    className="hidden md:flex relative z-10 w-10 bottom-18 justify-center"
                   >
                     <div className="w-4 h-4 bg-green-500 rounded-full" />
                   </motion.div>
@@ -120,7 +120,7 @@ export default function CVTimeline() {
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ delay: 0.4, duration: 1 }}
-                    className="hidden md:flex relative z-10 w-10 left-0.4 bottom-16 justify-center"
+                    className="hidden md:flex relative z-10 w-10 bottom-16 justify-center"
                   >
                     <div className="w-4 h-4 bg-green-500 rounded-full" />
                   </motion.div>

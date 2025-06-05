@@ -19,35 +19,39 @@ function HomeHero() {
   }, []);
 
   return (
-    <div
-      className="h-[400px] text-white bg-pink-900/30 p-4 rounded-xl shadow-lg bg-cover flex m-2 items-center"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundPosition: isMobile ? "30% center" : "center",
-      }}
-    >
-      <div className="pl-1 md:p-24 text-left max-w-[800px]">
-        <h2 className="text-3xl md:text-6xl font-bold text-shadow">
-          {isMobile ? (
-            <>
-              FrontEnd<br />
-              Developer
-            </>
-          ) : (
-            "FrontEnd Developer"
-          )}
-        </h2>
-        <p className="text-2xl md:text-4xl text-shadow">
-          {isMobile ? (
-            <>
-              Anette<br />
-              Therese<br />
-              Lindberg
-            </>
-          ) : (
-            "Anette Therese Lindberg"
-          )}
-        </p>
+    <div className="px-4 md:px-6 mt-2">
+      <div
+        className="max-w-[1200px] h-[300px] md:h-[350px] mx-auto rounded-xl shadow-lg bg-cover bg-no-repeat bg-center flex items-center justify-between overflow-hidden"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundPosition: isMobile ? "30% center" : "right 20% center",
+        }}
+      >
+        <div className="h-full flex items-center">
+          <div className="text-white px-4 md:px-12 max-w-[550px] text-left">
+            <h2 className="text-2xl md:text-5xl font-bold text-shadow leading-tight">
+              {isMobile ? (
+                <>
+                  FrontEnd<br />
+                  Developer
+                </>
+              ) : (
+                "FrontEnd Developer"
+              )}
+            </h2>
+            <p className="text-xl md:text-3xl text-shadow mt-2">
+              {isMobile ? (
+                <>
+                  Anette<br />
+                  Therese<br />
+                  Lindberg
+                </>
+              ) : (
+                "Anette Therese Lindberg"
+              )}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

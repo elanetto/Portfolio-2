@@ -12,7 +12,7 @@ function ProductList() {
       <h2 className="text-3xl font-bold text-dark-green w-full text-center mt-12 py-4">
         FrontEnd Portfolio
       </h2>
-      <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-stretch mt-4 mb-24">
+      <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center mx-auto mt-4 mb-24 max-w-[1200px]">
         <ProductCard
           title="Holidaze"
           description={lorem}

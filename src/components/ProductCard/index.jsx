@@ -7,7 +7,7 @@ function ProductCard({ title, description, image, hoverImage, link }) {
   return (
     <Link
       to={link}
-      className="bg-white rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 m-2 w-[calc(100%-1rem)] sm:w-[calc(50%-1rem)] md:w-[470px] cursor-pointer"
+      className="bg-white rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 m-2 w-[calc(100%-1rem)] sm:w-[calc(50%-1rem)] md:w-[350px] cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

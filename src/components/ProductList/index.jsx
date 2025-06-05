@@ -4,7 +4,7 @@ import HolidazeImg from "../../assets/portfolio/card/Holidaze-1.jpg";
 import HolidazeHover from "../../assets/portfolio/card/Holidaze-hover-video.mp4";
 import AuctionHouseImg from "../../assets/portfolio/card/AuctionHouse-1.jpg";
 import AuctionHouseHover from "../../assets/portfolio/card/AuctionHouseVideo-hover.mp4";
-import eShopImg from "../../assets/portfolio/card/eshop-1.jpg";
+import eShopImg from "../../assets/portfolio/card/eShop-1.jpg";
 import eShopHover from "../../assets/portfolio/card/eShop-video-hover.mp4";
 
 const holidazeText = 

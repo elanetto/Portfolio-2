@@ -1,8 +1,5 @@
-// ProductList.jsx
 import ProductCard from "./../ProductCard";
 import TechIcons from "./../Icons/TechIcons";
-import PlaceHolderImg from "../../assets/portfolio/card/placeholder_portfolio_card.png";
-import PlaceHolderImgHover from "../../assets/portfolio/gif/frontend_notes_frontpage.gif";
 import HolidazeImg from "../../assets/portfolio/card/Holidaze-1.jpg";
 import HolidazeHover from "../../assets/portfolio/card/Holidaze-hover-video.mp4";
 import AuctionHouseImg from "../../assets/portfolio/card/AuctionHouse-1.jpg";

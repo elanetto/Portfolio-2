@@ -1,4 +1,3 @@
-// src/components/Icons/TechIcons.jsx
 import { FaReact, FaHtml5, FaGithub, FaCode } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiVite } from "react-icons/si";
 import TooltipWrapper from "./../TooltipWrapper";

@@ -61,7 +61,7 @@ export default function CVTimeline() {
 
   return (
     <section
-      className="relative text-white py-20"
+      className="relative text-white py-20 max-w-[1200px] mx-auto"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(108, 118, 74, 0.9), rgba(32, 19, 9, 0.9)), url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -69,7 +69,7 @@ export default function CVTimeline() {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-18 md:px-4">
-        <h2 className="text-center text-4xl font-bold mb-16 tracking-widest text-creamy">
+        <h2 className="text-center text-2xl font-bold mb-16 tracking-widest text-white">
           ERFARING
         </h2>
 
@@ -95,8 +95,8 @@ export default function CVTimeline() {
                       {exp.year}
                     </p>
                     <h3 className="text-xl font-bold uppercase">{exp.title}</h3>
-                    <p className="font-semibold text-creamy">{exp.role}</p>
-                    <p className="text-creamy/90 mt-2 max-w-md ml-0 md:ml-auto">
+                    <p className="font-semibold text-white">{exp.role}</p>
+                    <p className="text-white mt-2 max-w-md ml-0 md:ml-auto text-sm">
                       {exp.description}
                     </p>
                   </div>
@@ -107,7 +107,7 @@ export default function CVTimeline() {
                     transition={{ delay: 0.4, duration: 1 }}
                     className="hidden md:flex relative z-10 w-10 left-0.9 bottom-18 justify-center"
                   >
-                    <div className="w-6 h-6 bg-green-500 rounded-full" />
+                    <div className="w-4 h-4 bg-green-500 rounded-full" />
                   </motion.div>
 
                   <div className="hidden md:block w-full md:w-1/2" />
@@ -120,9 +120,9 @@ export default function CVTimeline() {
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ delay: 0.4, duration: 1 }}
-                    className="hidden md:flex relative z-10 w-10 left-0.6 bottom-16 justify-center"
+                    className="hidden md:flex relative z-10 w-10 left-0.4 bottom-16 justify-center"
                   >
-                    <div className="w-6 h-6 bg-green-500 rounded-full" />
+                    <div className="w-4 h-4 bg-green-500 rounded-full" />
                   </motion.div>
 
                   <div className="w-full md:w-1/2 pl-0 md:pl-8 text-left">
@@ -130,8 +130,8 @@ export default function CVTimeline() {
                       {exp.year}
                     </p>
                     <h3 className="text-xl font-bold uppercase">{exp.title}</h3>
-                    <p className="font-semibold text-creamy">{exp.role}</p>
-                    <p className="text-creamy/90 mt-2 max-w-md">
+                    <p className="font-semibold text-white">{exp.role}</p>
+                    <p className="text-white mt-2 max-w-md text-sm">
                       {exp.description}
                     </p>
                   </div>

@@ -7,6 +7,7 @@ import AnetteImg2 from "./../../assets/images/anette_hero.jpg";
 import SocialsImgBg from "./../../assets/images/school-projects-hero.jpg";
 import { useNavigate } from "react-router-dom";
 import SocialIcons from "./../../components/Icons/SocialIcons";
+import { Helmet } from "react-helmet-async";
 
 function launchConfetti() {
   confetti({
@@ -57,7 +58,22 @@ export default function Contact() {
   }
 
   return (
-    <section className="min-h-screen px-4 py-20 max-w-[800px] mx-auto text-dark-green">
+    <section
+      className="min-h-screen px-4 py-20 max-w-[800px] mx-auto text-dark-green"
+      aria-labelledby="contact-heading"
+    >
+      <Helmet>
+        <title>Kontakt Anette Therese | Front-End Developer</title>
+        <meta
+          name="description"
+          content="Ta kontakt med Anette Therese Lindberg for nettsideprosjekter, design, eller samarbeid. Jeg svarer deg så snart jeg kan!"
+        />
+        <link
+          rel="canonical"
+          href="https://anette-portfolio.onrender.com/contact"
+        />
+      </Helmet>
+
       <div>
         {/* Hero image with overlay */}
         <div
@@ -73,6 +89,10 @@ export default function Contact() {
             </p>
           </div>
         </div>
+
+        <h1 className="sr-only" id="contact-heading">
+          Kontakt Anette Therese Lindberg
+        </h1>
 
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto px-4 md:px-0 text-dark-green mb-12">
           {/* Left section */}

@@ -40,15 +40,32 @@ export function Footer() {
             og HTML5. Prosjektet er bygd opp i komponenter og kodet i Visual
             Studio Code.
           </p>
-          <p className="flex gap-4 text-2xl pt-4">
-            <TechIcons.vite />
-            <TechIcons.react />
-            <TechIcons.tailwind />
-            <TechIcons.javascript />
-            <TechIcons.html5 />
-            <TechIcons.github />
-            <TechIcons.vscode />
-          </p>
+          <ul
+            className="flex gap-4 text-2xl pt-4"
+            aria-label="Tech stack icons"
+          >
+            <li>
+              <TechIcons.vite />
+            </li>
+            <li>
+              <TechIcons.react />
+            </li>
+            <li>
+              <TechIcons.tailwind />
+            </li>
+            <li>
+              <TechIcons.javascript />
+            </li>
+            <li>
+              <TechIcons.html5 />
+            </li>
+            <li>
+              <TechIcons.github />
+            </li>
+            <li>
+              <TechIcons.vscode />
+            </li>
+          </ul>
         </div>
 
         {/* Navigation */}
@@ -58,19 +75,25 @@ export function Footer() {
           </h3>
           <ul className="space-y-1">
             <li>
-              <Link to="/home" className="hover:underline hover:text-sunny">
+              <Link
+                to="/home"
+                className="hover:underline hover:text-sunny cursor-pointer"
+              >
                 Hjem
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:underline hover:text-sunny">
+              <Link
+                to="/contact"
+                className="hover:underline hover:text-sunny cursor-pointer"
+              >
                 Kontakt meg
               </Link>
             </li>
             <li>
               <button
                 onClick={handleScrollToEducation}
-                className="hover:underline hover:text-sunny text-left"
+                className="hover:underline hover:text-sunny text-left cursor-pointer"
                 aria-label="Gå til utdanningsseksjon"
               >
                 Min utdanning
@@ -79,7 +102,7 @@ export function Footer() {
             <li>
               <button
                 onClick={handleScrollToCV}
-                className="hover:underline hover:text-sunny text-left"
+                className="hover:underline hover:text-sunny text-left cursor-pointer"
                 aria-label="Gå til erfaringsseksjon"
               >
                 Min erfaring
@@ -88,7 +111,7 @@ export function Footer() {
             <li>
               <button
                 onClick={handleScrollToPortfolio}
-                className="hover:underline hover:text-sunny text-left"
+                className="hover:underline hover:text-sunny text-left cursor-pointer"
                 aria-label="Gå til portfolioseksjon"
               >
                 Se Portfolio

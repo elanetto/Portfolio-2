@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import confetti from "canvas-confetti";
 import AnetteImg from "./../../assets/images/anette-goldsmiths-wow-2.jpg";
 import AnetteImg2 from "./../../assets/images/anette_hero.jpg";
-import duckImg from "./../../assets/images/school-projects-hero.jpg";
+import SocialsImgBg from "./../../assets/images/school-projects-hero.jpg";
 import { useNavigate } from "react-router-dom";
 import SocialIcons from "./../../components/Icons/SocialIcons";
 
@@ -51,7 +51,7 @@ export default function Contact() {
       })
       .catch((err) => {
         console.error("Email send error:", err);
-        setError(err.message || "Noe gikk galt! 😢"); 
+        setError(err.message || "Noe gikk galt! 😢");
         toast.error("Noe gikk galt! 😢");
       });
   }
@@ -67,7 +67,7 @@ export default function Contact() {
           }}
         >
           <div className="relative z-10 max-w-xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Om meg</h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4">Om meg</h2>
             <p className="text-lg md:text-xl">
               ...og hva jeg kan hjelpe deg med
             </p>
@@ -207,14 +207,31 @@ export default function Contact() {
           <div
             className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-12 mt-12"
             style={{
-              backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.9), rgba(48, 102, 109, 0.9)), url(${duckImg})`,
+              backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.9), rgba(48, 102, 109, 0.9)), url(${SocialsImgBg})`,
             }}
           >
             <div className="relative z-10 max-w-xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                ...eller email meg på:
+                ...eller email meg:
               </h2>
-              <p className="pb-24">kontakt @ anettetherese .no</p>
+              <p className="pb-24">
+                <button
+                  onClick={() =>
+                    (window.location.href = [
+                      "mailto:",
+                      "kontakt",
+                      "@",
+                      "anettetherese",
+                      ".no",
+                    ].join(""))
+                  }
+                  className="underline text-white hover:text-cyan-blue cursor-pointer"
+                  aria-label="Send e-post til kontakt@anettetherese.no"
+                >
+                  {["kontakt", "@", "anettetherese", ".", "no"].join("")}
+                </button>
+              </p>
+
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Du kan også finne meg på:
               </h2>
@@ -223,7 +240,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/anettetherese/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
+                  aria-label="Besøk LinkedIn-profilen til Anette Therese"
                 >
                   {SocialIcons.linkedin()}
                 </a>
@@ -231,7 +248,7 @@ export default function Contact() {
                   href="https://www.instagram.com/elanetto/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram"
+                  aria-label="Besøk Instagram-profilen til Anette: Elanetto"
                 >
                   {SocialIcons.instagram()}
                 </a>
@@ -239,7 +256,7 @@ export default function Contact() {
                   href="https://github.com/elanetto"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="GitHub"
+                  aria-label="Besøk GitHub-profilen til Anette: Elanetto"
                 >
                   {SocialIcons.github()}
                 </a>

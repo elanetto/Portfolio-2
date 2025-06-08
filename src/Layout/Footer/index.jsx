@@ -1,4 +1,5 @@
 import TechIcons from "./../../components/Icons/TechIcons";
+import SocialIcons from "./../../components/Icons/SocialIcons";
 
 export function Footer() {
   return (
@@ -62,22 +63,43 @@ export function Footer() {
         {/* Social Media */}
         <div className="space-y-4">
           <h3 className="font-semibold text-creamy uppercase tracking-wide text-sm">
-            Follow Us
+            Følg meg
           </h3>
-          <p>ikon</p>
-          <p>ikon</p>
-          <p>ikon</p>
-          <p>ikon</p>
+          <div className="flex gap-2">
+            <a
+              href="https://www.linkedin.com/in/anettetherese/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besøk LinkedIn-profilen til Anette Therese"
+            >
+              {SocialIcons.linkedin()}
+            </a>
+            <a
+              href="https://www.instagram.com/elanetto/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besøk Instagram-profilen til Anette: Elanetto"
+            >
+              {SocialIcons.instagram()}
+            </a>
+            <a
+              href="https://github.com/elanetto"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besøk GitHub-profilen til Anette: Elanetto"
+            >
+              {SocialIcons.github()}
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Bottom bar */}
       <div className="mt-10 pt-6 border-t border-creamy/20 text-sm text-center text-creamy/60">
         <p>
-          © {new Date().getFullYear()} Anette Therese Lindberg. All rights
-          reserved.
+          © {new Date().getFullYear()} Anette Therese Lindberg.
         </p>
-        <p className="italic text-xs">Hvorfor titter du her? 👀</p>
+        <p className="italic text-xs text-yellow-800 pt-4">Hvorfor titter du her?</p>
       </div>
     </footer>
   );

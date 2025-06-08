@@ -6,27 +6,27 @@ const iconStyle = "text-white text-2xl hover:scale-110 transition-transform";
 const SocialIcons = {
   linkedin: () => (
     <TooltipWrapper text="LinkedIn">
-      <FaLinkedin className={iconStyle} />
+      <FaLinkedin className={iconStyle} aria-hidden="true" />
     </TooltipWrapper>
   ),
   instagram: () => (
     <TooltipWrapper text="Instagram">
-      <FaInstagram className={iconStyle} />
+      <FaInstagram className={iconStyle} aria-hidden="true" />
     </TooltipWrapper>
   ),
   facebook: () => (
     <TooltipWrapper text="Facebook">
-      <FaFacebook className={iconStyle} />
+      <FaFacebook className={iconStyle} aria-hidden="true" />
     </TooltipWrapper>
   ),
   twitter: () => (
     <TooltipWrapper text="Twitter">
-      <FaTwitter className={iconStyle} />
+      <FaTwitter className={iconStyle} aria-hidden="true" />
     </TooltipWrapper>
   ),
   github: () => (
     <TooltipWrapper text="GitHub">
-      <FaGithub className={iconStyle} />
+      <FaGithub className={iconStyle} aria-hidden="true" />
     </TooltipWrapper>
   ),
 };

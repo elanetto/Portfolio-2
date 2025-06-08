@@ -38,7 +38,15 @@ function HomeHero() {
               id="hero-heading"
               className="text-3xl pl-5 md:pl-0 md:text-5xl font-bold text-shadow leading-tight"
             >
-              Anette Therese
+              {isMobile ? (
+                <>
+                  Anette
+                  <br />
+                  Therese
+                </>
+              ) : (
+                "Anette Therese"
+              )}
             </h1>
             <p className="text-2xl pl-5 md:pl-0 md:text-3xl text-shadow mt-2">
               {isMobile ? (

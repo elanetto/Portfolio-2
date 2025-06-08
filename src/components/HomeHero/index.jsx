@@ -10,7 +10,7 @@ function HomeHero() {
       setIsMobile(window.innerWidth < 768);
     };
 
-    checkMobile(); // Run on mount
+    checkMobile(); 
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);

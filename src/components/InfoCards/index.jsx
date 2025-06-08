@@ -8,7 +8,7 @@ import backgroundImage3 from "../../assets/images/school-projects-hero.jpg";
 const cards = [
   {
     icon: MdLooks5,
-    text: `5 års erfaring innen Digital Markedsføring, Art Direction og Grafisk Design: Sosiale medier, foto, innhold til nettsider.`,
+    text: `5 års erfaring innen Art Direction, Digital Markedsføring og Grafisk Design: Sosiale medier, foto, innhold til nettsider, logo, med mer.`,
     bgImage: backgroundImage1,
     scrollId: "cv",
     ariaLabel: "Scroll to CV section for marketing experience",
@@ -33,7 +33,8 @@ function InfoCards() {
   return (
     <div className="flex flex-wrap justify-between max-w-[1200px] mx-auto mt-8 px-4 md:px-0 space-y-4 md:space-y-0">
       {cards.map((card) => (
-        <InfoCard key={card.scrollId} {...card} />
+        <InfoCard key={`${card.scrollId}-${card.ariaLabel}`} {...card} />
+
       ))}
     </div>
   );

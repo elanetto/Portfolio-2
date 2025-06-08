@@ -98,7 +98,7 @@ export default function CVTimeline() {
 
           {experiences.map((exp, index) => (
             <div
-              key={index}
+              key={`${exp.year}-${exp.title}`}
               className="relative flex flex-col md:flex-row items-center mb-16"
             >
               {index % 2 === 0 ? (

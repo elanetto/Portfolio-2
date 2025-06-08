@@ -47,7 +47,7 @@ export default function EducationTimeline() {
     },
     {
       year: "2009 - 2010",
-      title: "BACHELOR WITH HONOURS IN ADVERTISING",
+      title: "BACHELOR IN ADVERTISING",
       role: "Southampton Solent University",
       description:
         "Advertising Design, Copywriting, Online Advertising, Creative Team, Agency Simulation.",
@@ -98,7 +98,7 @@ export default function EducationTimeline() {
 
           {education.map((edu, index) => (
             <div
-              key={index}
+              key={`${edu.year}-${edu.title}`}
               className="relative flex flex-col md:flex-row items-center mb-16"
             >
               {index % 2 === 0 ? (

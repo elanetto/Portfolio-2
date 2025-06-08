@@ -1,5 +1,6 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { splitTextIntoParagraphs } from "./../../utils/splitText";
 
 function PortfolioLayout({
   title,
@@ -35,9 +36,15 @@ function PortfolioLayout({
         </Carousel>
       )}
 
-      {/* Title and description */}
+      {/* Title */}
       <h1 className="text-4xl font-bold text-dark-green mb-4">{title}</h1>
-      <p className="text-lg mb-6">{description}</p>
+
+      {/* Description */}
+      {splitTextIntoParagraphs(description).map((para, index) => (
+        <p key={index} className="text-base mb-4">
+          {para}
+        </p>
+      ))}
 
       {/* Reflections */}
       {reflections && (
@@ -45,11 +52,15 @@ function PortfolioLayout({
           <h2 className="text-2xl font-semibold text-dark-green mb-2">
             Refleksjoner
           </h2>
-          <p className="text-base">{reflections}</p>
+          {splitTextIntoParagraphs(reflections).map((para, index) => (
+            <p key={index} className="text-base mb-3">
+              {para}
+            </p>
+          ))}
         </div>
       )}
 
-      {/* Icons */}
+      {/* Tech Icons */}
       {icons.length > 0 && (
         <div className="flex gap-4 flex-wrap mb-6 text-2xl text-dark-green">
           {icons.map((Icon, i) => (
@@ -82,7 +93,7 @@ function PortfolioLayout({
         )}
       </div>
 
-      {/* Custom child content */}
+      {/* Custom Content */}
       {children}
     </div>
   );

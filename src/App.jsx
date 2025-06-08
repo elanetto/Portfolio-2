@@ -2,6 +2,7 @@ import HomeHero from "./components/HomeHero";
 import InfoCards from "./components/InfoCards";
 import ProductList from "./components/ProductList";
 import CVTimeline from "./components/CV/CVTimeLine";
+import EducationTimeline from "./components/CV/EducationTimeline";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <HomeHero />
       <InfoCards />
       <ProductList />
+      <EducationTimeline />
       <CVTimeline />
     </div>
   );

@@ -32,22 +32,22 @@ function HomeHero() {
             <h2 className="text-2xl md:text-5xl font-bold text-shadow leading-tight">
               {isMobile ? (
                 <>
-                  FrontEnd<br />
-                  Developer
+                  Anette<br />
+                  Therese
                 </>
               ) : (
-                "FrontEnd Developer"
+                "Anette Therese"
               )}
             </h2>
             <p className="text-xl md:text-3xl text-shadow mt-2">
               {isMobile ? (
                 <>
-                  Anette<br />
-                  Therese<br />
-                  Lindberg
+                  Koding<br />
+                  Kommunikasjon<br />
+                  & Design
                 </>
               ) : (
-                "Anette Therese Lindberg"
+                "Koding, Kommunikasjon & Design"
               )}
             </p>
           </div>

@@ -28,7 +28,7 @@ function PortfolioLayout({
               <img
                 src={img}
                 alt={`Slide ${index + 1} for ${title}`}
-                className="rounded-xl h-[550px] object-cover object-top"
+                className="rounded-xl h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover object-top"
               />
             </div>
           ))}
@@ -42,7 +42,9 @@ function PortfolioLayout({
       {/* Reflections */}
       {reflections && (
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-dark-green mb-2">Refleksjoner</h2>
+          <h2 className="text-2xl font-semibold text-dark-green mb-2">
+            Refleksjoner
+          </h2>
           <p className="text-base">{reflections}</p>
         </div>
       )}

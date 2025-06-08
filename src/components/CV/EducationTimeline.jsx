@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useRef, useEffect } from "react";
-import backgroundImage from "../../assets/images/anette-goldsmiths-wow.jpg";
+import backgroundImage from "../../assets/images/school-projects-hero.jpg";
 
-export default function CVTimeline() {
+export default function EducationTimeline() {
   const ref = useRef(null);
   const isInView = useInView(ref, { threshold: 0.3 });
   const controls = useAnimation();
@@ -16,74 +16,74 @@ export default function CVTimeline() {
     }
   }, [isInView, controls]);
 
-  const experiences = [
+  const education = [
     {
-      year: "2018 - 2023",
-      title: "BAKKELØKKA UNGDOMSSKOLE",
-      role: "Lektor, Trinnkoordinator, Kontaktlærer og IKT-ansvarlig",
+      year: "2023 - 2025",
+      title: "FRONT END DEVELOPMENT",
+      role: "Noroff, Campus Oslo",
       description:
-        "Lærer i Medier og Engelsk. IKT-ansvarlig for hele skolen. Lærer elevene å formidle valgte budskap gjennom gode tekster, design, video og bilder.",
+        "Nettsidedesign. Figma, HTML, CSS, JavaScript, Vite, React, TypeScript, SQL.",
     },
     {
       year: "2016 - 2017",
-      title: "BIG PICTURE",
-      role: "Digital Markedsfører og Art Director",
+      title: "PRAKTISK PEDAGOGISK UTDANNING",
+      role: "NTNU, Trondheim",
       description:
-        "Reklamebyrå i Bodø. Jobbet direkte med kunder og lagde reklamekampanjer, videoer og bilder for sosiale medier. Bygde nettsider, brosjyrer og plakater.",
+        "Pedagogikk, Engelsk didaktikk, Media didaktikk, 14 ukers praksis.",
     },
     {
-      year: "2014 - 2015",
-      title: "HØYSKOLEN I NESNA",
-      role: "Høyskolelektor og Studieansvarlig",
+      year: "2015 - 2016",
+      title: "ENGELSK ÅRSSTUDIUM",
+      role: "Universitetet i Nordland, Bodø",
       description:
-        "Jobbet som studieansvarlig for årsstudiet Digitale Medier ved Campus Helgeland. Var lærer i dagene Idéutvikling, Grafisk Design, Foto og Sosiale Medier.",
-    },
-    {
-      year: "2013 - 2014",
-      title: "GULLSMEDGRUPPEN AS",
-      role: "Digital Markedsfører",
-      description:
-        "Styrte de to nettbutikkene Gullfunn og Juvelen, samt drev deres medlemsklubber og all aktivitet på sosiale medier fra begge butikkene. Jobbet med SEO, og analyserte hva som fungerte på nett. Lagde kinoreklame, adshell, rollups, email marketing, plakater og en rekke annet grafisk materiale.",
+        "English Linguistics, American literature, British Literature, Scientific and research writing.",
     },
     {
       year: "2012 - 2013",
-      title: "CEN8",
-      role: "Kommunikasjonskonsulent",
+      title: "MASTER I DIGITALE MEDIER",
+      role: "Goldsmiths, University of London",
       description:
-        "Frivillig arbeid på siden av master-studiet. Veiledet ledelsen innen kommunikasjon og bruk av sosiale medier. Lagde også materiale i form av nettside, brosjyrer, kalender, rollup, video og blogg.",
+        "Hovedfag: Design and Processes for Innovation, Social Media Campaigning, Digital News Writing. etc.",
     },
     {
-      year: "2011 - 2012",
-      title: "HJERNESTORM",
-      role: "Grafisk designer",
+      year: "2009 - 2010",
+      title: "BACHELOR IN ADVERTISING",
+      role: "Southampton Solent University",
       description:
-        "Jobbet som del av et kreativt team og bygde grafisk materiale i form av: kampanjer, magasin, brosjyrer, grafiske profiler, infografer, DM, banner ads, facebook page design, nettsider og annonser.",
+        "Advertising Design, Copywriting, Online Advertising, Creative Team, Agency Simulation.",
     },
     {
-      year: "2011",
-      title: "PERSONELLSERVICE TRØNDELAG",
-      role: "Grafisk designer",
+      year: "2007 - 2009",
+      title: "REKLAME OG KOMMUNIKASJON",
+      role: "Norges Kreative Fagskole, Trondheim",
       description:
-        "I tillegg til å gjøre research og konseptutvikling for markedsføringen av to nye produkter, bygget jeg grafisk materiale i form av brosjyrer, plakater, intranet reklame og email marketing.",
+        "Kommunikasjonsstrategi, Visuell kommunikasjon, Tekst, Design og Kreative metoder.",
+    },
+    {
+      year: "2004 - 2007",
+      title: "STUDIESPESIALISERENDE",
+      role: "Moheia Videregående skole, Mo i Rana",
+      description: "Oppnådde spesiell studiekompetanse.",
     },
   ];
 
   return (
     <section
-      id="cv"
+      id="education"
       className="relative text-white py-20 max-w-[1200px] mx-auto"
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(108, 118, 74, 0.9), rgba(32, 19, 9, 0.9)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(48, 102, 109, 0.9), rgba(32, 19, 9, 0.9)), url(${backgroundImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "46% center",
+        backgroundPosition: "80% center",
       }}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-18 md:px-4">
         <h2 className="text-center text-2xl font-bold mb-16 tracking-widest text-white">
-          ERFARING
+          UTDANNING
         </h2>
 
         <div ref={ref} className="relative">
+          {/* Animated vertical line */}
           <motion.div
             variants={{
               hidden: { height: 0 },
@@ -96,21 +96,21 @@ export default function CVTimeline() {
             style={{ transform: "translateX(-50%)" }}
           />
 
-          {experiences.map((exp, index) => (
+          {education.map((edu, index) => (
             <div
-              key={`${exp.year}-${exp.title}`}
+              key={`${edu.year}-${edu.title}`}
               className="relative flex flex-col md:flex-row items-center mb-16"
             >
               {index % 2 === 0 ? (
                 <>
                   <div className="w-full md:w-1/2 pr-0 md:pr-8 text-left md:text-right">
                     <p className="text-green-400 font-bold text-sm">
-                      {exp.year}
+                      {edu.year}
                     </p>
-                    <h3 className="text-xl font-bold uppercase">{exp.title}</h3>
-                    <p className="font-semibold text-white">{exp.role}</p>
+                    <h3 className="text-xl font-bold uppercase">{edu.title}</h3>
+                    <p className="font-semibold text-white">{edu.role}</p>
                     <p className="text-white mt-2 max-w-sm ml-0 md:ml-auto text-sm">
-                      {exp.description}
+                      {edu.description}
                     </p>
                   </div>
 
@@ -122,7 +122,7 @@ export default function CVTimeline() {
                     initial="hidden"
                     animate={controls}
                     transition={{ delay: 0.4, duration: 1 }}
-                    className="hidden md:flex relative z-10 w-10 bottom-18 justify-center"
+                    className="hidden md:flex relative z-10 w-10 bottom-14 justify-center"
                   >
                     <div className="w-4 h-4 bg-green-500 rounded-full" />
                   </motion.div>
@@ -141,19 +141,19 @@ export default function CVTimeline() {
                     initial="hidden"
                     animate={controls}
                     transition={{ delay: 0.4, duration: 1 }}
-                    className="hidden md:flex relative z-10 w-10 bottom-16 justify-center"
+                    className="hidden md:flex relative z-10 w-10 bottom-10 justify-center"
                   >
                     <div className="w-4 h-4 bg-green-500 rounded-full" />
                   </motion.div>
 
                   <div className="w-full md:w-1/2 pl-0 md:pl-8 text-left">
                     <p className="text-green-400 font-bold text-sm">
-                      {exp.year}
+                      {edu.year}
                     </p>
-                    <h3 className="text-xl font-bold uppercase">{exp.title}</h3>
-                    <p className="font-semibold text-white">{exp.role}</p>
+                    <h3 className="text-xl font-bold uppercase">{edu.title}</h3>
+                    <p className="font-semibold text-white">{edu.role}</p>
                     <p className="text-white mt-2 max-w-md text-sm">
-                      {exp.description}
+                      {edu.description}
                     </p>
                   </div>
                 </>

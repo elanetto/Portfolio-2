@@ -1,7 +1,9 @@
 import HomeHero from "./components/HomeHero";
 import InfoCards from "./components/InfoCards";
 import ProductList from "./components/ProductList";
-import CVTimeline from "./components/CV/CVTimeLine";
+import CVTimeline from "./components/CV/CVTimeline";
+import EducationTimeline from "./components/CV/EducationTimeline";
+import ContactCTA from "./components/ContactCTA";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <HomeHero />
       <InfoCards />
       <ProductList />
+      <ContactCTA />
+      <EducationTimeline />
       <CVTimeline />
     </div>
   );

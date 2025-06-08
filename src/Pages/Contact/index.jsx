@@ -51,6 +51,7 @@ export default function Contact() {
       })
       .catch((err) => {
         console.error("Email send error:", err);
+        setError(err.message || "Noe gikk galt! 😢"); 
         toast.error("Noe gikk galt! 😢");
       });
   }
@@ -222,6 +223,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/anettetherese/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn"
                 >
                   {SocialIcons.linkedin()}
                 </a>
@@ -229,6 +231,7 @@ export default function Contact() {
                   href="https://www.instagram.com/elanetto/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram"
                 >
                   {SocialIcons.instagram()}
                 </a>
@@ -236,6 +239,7 @@ export default function Contact() {
                   href="https://github.com/elanetto"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub"
                 >
                   {SocialIcons.github()}
                 </a>

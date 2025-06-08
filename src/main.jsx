@@ -10,6 +10,7 @@ import Nettbutikk from "./Pages/Portfolio/eShop";
 import Contact from "./Pages/Contact";
 import { Toaster } from "react-hot-toast";
 import { ScrollProvider } from "./context/ScrollProvider";
+import NotFound from "./Pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "eshop",
         element: <Nettbutikk />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },

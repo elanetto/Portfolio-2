@@ -8,13 +8,13 @@ import eShopImg from "../../assets/portfolio/card/eShop-1.jpg";
 import eShopHover from "../../assets/portfolio/card/eShop-video-hover.mp4";
 
 const holidazeText =
-  "En booking nettide: Søk, book eller legg ut dine egne venues. Skoleoppgave i Frontendutvikling på Noroff. Nettsiden bruker en API.";
+  "En booking nettide: Søk, book eller legg ut dine egne venues. Jeg har lagd en whimsical og leken nettsidedesign, og bygd en sofistikert søkemotor. Bygd med fokus på tilgjengelighet.";
 
 const auctionHouseText =
-  "En auksjonsnettside hvor man kan søke, by på og delta på auksjoner. Man kan også legge ut egne produkter. API fra Noroff. Skoleoppgave.";
+  "En auksjonsnettside hvor man kan søke, by på og delta på auksjoner. Man kan også legge ut egne produkter. WAP-vennlig design. Lag din egen bruker for å delta på auksjoner.";
 
 const eShopText =
-  "En enkel e-handelsnettsted hvor man kan søke etter produkter og kjøpe dem. Skoleoppgave med en gitt API fra Noroff.";
+  "Et enkel e-handelsnettsted hvor man kan søke etter produkter og 'kjøpe' dem. Brukervennlig kasse-system og enkel åpning av produkter. Skreddersydd for mobil og nettbrett.";
 
 function ProductList() {
   return (

@@ -58,7 +58,7 @@ export default function Contact() {
 
   return (
     <section
-      className="min-h-screen px-4 py-20 max-w-[800px] mx-auto text-dark-green"
+      className="min-h-screen  max-w-[1200px] mx-auto text-dark-green"
       aria-labelledby="contact-heading"
     >
       <div>
@@ -153,63 +153,72 @@ export default function Contact() {
               </p>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block font-semibold mb-1">
-                Fullt navn
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
-              />
-            </div>
 
-            <div>
-              <label htmlFor="email" className="block font-semibold mb-1">
-                E-postadresse
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block font-semibold mb-1">
-                Melding
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                rows="5"
-                minLength={5}
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
-              />
-              <p className="text-sm text-gray-600 mt-1">Minst 5 tegn</p>
-            </div>
-
-            <button
-              type="submit"
-              className="bg-cyan-blue text-black font-semibold px-6 py-3 rounded-full hover:bg-dark-green hover:text-white transition-colors duration-300 shadow-md"
+          {/* Kontakt sjema */}
+          <div className="flex justify-center">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 max-w-[600px] w-full px-4"
             >
-              Send melding
-            </button>
+              <div>
+                <label htmlFor="name" className="block font-semibold mb-1">
+                  Fullt navn
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
+                />
+              </div>
 
-            {error && <p className="text-red-500 text-sm mt-4">{error}</p>}
-          </form>
+              <div>
+                <label htmlFor="email" className="block font-semibold mb-1">
+                  E-postadresse
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block font-semibold mb-1">
+                  Melding
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="5"
+                  minLength={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
+                />
+                <p className="text-sm text-gray-600 mt-1">Minst 5 tegn</p>
+              </div>
+
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="bg-cyan-blue text-black font-semibold px-6 py-3 rounded-full hover:bg-dark-green hover:text-white transition-colors duration-300 shadow-md"
+                >
+                  Send melding
+                </button>
+              </div>
+
+              {error && <p className="text-red-500 text-sm mt-4">{error}</p>}
+            </form>
+          </div>
 
           <div
             className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-12 mt-12"

@@ -7,19 +7,22 @@ import AuctionHouseHover from "../../assets/portfolio/card/AuctionHouseVideo-hov
 import eShopImg from "../../assets/portfolio/card/eShop-1.jpg";
 import eShopHover from "../../assets/portfolio/card/eShop-video-hover.mp4";
 
-const holidazeText = 
-    "En booking nettide: Søk, book eller legg ut dine egne venues. Skoleoppgave i Frontendutvikling på Noroff. Nettsiden bruker en API.";
+const holidazeText =
+  "En booking nettide: Søk, book eller legg ut dine egne venues. Skoleoppgave i Frontendutvikling på Noroff. Nettsiden bruker en API.";
 
-const auctionHouseText = 
-    "En auksjonsnettside hvor man kan søke, by på og delta på auksjoner. Man kan også legge ut egne produkter. API fra Noroff. Skoleoppgave.";
+const auctionHouseText =
+  "En auksjonsnettside hvor man kan søke, by på og delta på auksjoner. Man kan også legge ut egne produkter. API fra Noroff. Skoleoppgave.";
 
 const eShopText =
-    "En enkel e-handelsnettsted hvor man kan søke etter produkter og kjøpe dem. Skoleoppgave med en gitt API fra Noroff.";
+  "En enkel e-handelsnettsted hvor man kan søke etter produkter og kjøpe dem. Skoleoppgave med en gitt API fra Noroff.";
 
 function ProductList() {
   return (
     <>
-      <h2 className="text-3xl font-bold text-dark-green w-full text-center mt-12 py-4">
+      <h2
+        className="text-3xl font-bold text-dark-green w-full text-center mt-12 py-4"
+        id="portfolio"
+      >
         FrontEnd Portfolio
       </h2>
       <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center mx-auto mt-4 mb-24 max-w-[1200px]">
@@ -59,7 +62,14 @@ function ProductList() {
           image={eShopImg}
           hoverImage={eShopHover}
           link="/eshop"
-          icons={[TechIcons.html5, TechIcons.javascript, TechIcons.tailwind]}
+          icons={[
+            TechIcons.github,
+            TechIcons.vite,
+            TechIcons.react,
+            TechIcons.javascript,
+            TechIcons.tailwind,
+            TechIcons.html5,
+          ]}
         />
       </div>
     </>

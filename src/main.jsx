@@ -9,7 +9,7 @@ import AuctionHouse from "./Pages/Portfolio/AuctionHouse";
 import Nettbutikk from "./Pages/Portfolio/eShop";
 import Contact from "./Pages/Contact";
 import { Toaster } from "react-hot-toast";
-
+import { ScrollProvider } from "./context/ScrollProvider";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +19,6 @@ const router = createBrowserRouter([
       { path: "", element: <App /> },
       { path: "home", element: <App /> },
       { path: "contact", element: <Contact /> },
-
-      // Portfolio pages:
       {
         path: "holidaze",
         element: <Holidaze />,
@@ -39,18 +37,20 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
-    <Toaster
-      position="top-center"
-      toastOptions={{
-        duration: 4000,
-        style: {
-          background: "#201309",
-          color: "#fff",
-          borderRadius: "12px",
-          padding: "12px 16px",
-        },
-      }}
-    />
+    <ScrollProvider>
+      <RouterProvider router={router} />
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: "#201309",
+            color: "#fff",
+            borderRadius: "12px",
+            padding: "12px 16px",
+          },
+        }}
+      />
+    </ScrollProvider>
   </StrictMode>
 );

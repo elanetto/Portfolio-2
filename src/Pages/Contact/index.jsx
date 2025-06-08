@@ -158,9 +158,9 @@ export default function Contact() {
             }}
           >
             <div className="relative z-10 max-w-lg mx-auto">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Kontakt meg
-              </h1>
+              </h2>
               <p className="text-lg md:text-xl">
                 Send meg gjerne en melding her
               </p>

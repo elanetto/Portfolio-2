@@ -3,6 +3,7 @@ import SocialIcons from "./../../components/Icons/SocialIcons";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { scrollToHash } from "./../../utils/scrollToHash";
 import { useScrollTarget } from "../../context/useScrollTarget";
+import whiteLogo from "./../../assets/logo/at-logo-white.svg";
 
 export function Footer() {
   const navigate = useNavigate();
@@ -13,8 +14,8 @@ export function Footer() {
     if (location.pathname === "/" || location.pathname === "/home") {
       scrollToHash(id);
     } else {
-      setScrollTarget(id); // Save the intended scroll target
-      navigate("/home", { replace: false }); // Then navigate
+      setScrollTarget(id);
+      navigate("/home", { replace: false });
     }
   }
 
@@ -27,11 +28,17 @@ export function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10">
         {/* Logo & Description */}
         <div className="space-y-4">
+          <img
+            src={whiteLogo}
+            className="h-8"
+            alt="Anette Therese: white logo"
+          />
           <h2 className="text-2xl font-bold">Anette Therese Lindberg</h2>
-          <p className="text-sm text-creamy/80">Dette er min FrontEnd portfolio</p>
+          <p className="text-sm text-creamy/80">FrontEnd portfolio</p>
           <p className="text-sm text-creamy/80">
-            Denne nettsiden er et Vite React prosjekt med Tailwind, Javascript og HTML5.
-            Prosjektet er bygd opp i komponenter og kodet i Visual Studio Code.
+            Denne nettsiden er et Vite React prosjekt med Tailwind, Javascript
+            og HTML5. Prosjektet er bygd opp i komponenter og kodet i Visual
+            Studio Code.
           </p>
           <p className="flex gap-4 text-2xl pt-4">
             <TechIcons.vite />
@@ -46,7 +53,9 @@ export function Footer() {
 
         {/* Navigation */}
         <div className="space-y-2 text-sm">
-          <h3 className="font-semibold text-creamy uppercase tracking-wide">Finn frem</h3>
+          <h3 className="font-semibold text-creamy uppercase tracking-wide">
+            Finn frem
+          </h3>
           <ul className="space-y-1">
             <li>
               <Link to="/home" className="hover:underline hover:text-sunny">
@@ -54,9 +63,9 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:underline hover:text-sunny">
+              <Link to="/contact" className="hover:underline hover:text-sunny">
                 Kontakt meg
-              </a>
+              </Link>
             </li>
             <li>
               <button
@@ -125,7 +134,9 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="mt-10 pt-6 border-t border-creamy/20 text-sm text-center text-creamy/60">
         <p>© {new Date().getFullYear()} Anette Therese Lindberg.</p>
-        <p className="italic text-xs text-yellow-800 pt-4">Hvorfor titter du her?</p>
+        <p className="italic text-xs text-yellow-800 pt-4">
+          Hvorfor titter du her?
+        </p>
       </div>
     </footer>
   );

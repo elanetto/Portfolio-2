@@ -1,41 +1,26 @@
 import TechIcons from "./../../components/Icons/TechIcons";
 import SocialIcons from "./../../components/Icons/SocialIcons";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { scrollToHash } from "./../../utils/scrollToHash";
+import { useScrollTarget } from "../../context/useScrollTarget";
 
 export function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { setScrollTarget } = useScrollTarget();
 
-  function handleScrollToEducation() {
+  function handleScrollToSection(id) {
     if (location.pathname === "/" || location.pathname === "/home") {
-      scrollToHash("education");
+      scrollToHash(id);
     } else {
-      navigate("/home", { replace: false });
-
-      setTimeout(() => scrollToHash("education"), 100);
+      setScrollTarget(id); // Save the intended scroll target
+      navigate("/home", { replace: false }); // Then navigate
     }
   }
 
-  function handleScrollToCV() {
-    if (location.pathname === "/" || location.pathname === "/home") {
-      scrollToHash("cv");
-    } else {
-      navigate("/home", { replace: false });
-
-      setTimeout(() => scrollToHash("cv"), 100);
-    }
-  }
-
-    function handleScrollToPortfolio() {
-    if (location.pathname === "/" || location.pathname === "/home") {
-      scrollToHash("portfolio");
-    } else {
-      navigate("/home", { replace: false });
-
-      setTimeout(() => scrollToHash("portfolio"), 100);
-    }
-  }
+  const handleScrollToEducation = () => handleScrollToSection("education");
+  const handleScrollToCV = () => handleScrollToSection("cv");
+  const handleScrollToPortfolio = () => handleScrollToSection("portfolio");
 
   return (
     <footer className="bg-espressoy bg-moss-brown text-white w-full py-12 px-4 sm:px-8">
@@ -45,37 +30,28 @@ export function Footer() {
           <h2 className="text-2xl font-bold">Anette Therese Lindberg</h2>
           <p className="text-sm text-creamy/80">Dette er min FrontEnd portfolio</p>
           <p className="text-sm text-creamy/80">
-            Denne nettsiden er et Vite React prosjekt med Tailwind, Javascript
-            og HTML5. Prosjektet er bygd opp i komponenter og kodet i Visual
-            Studio Code.
+            Denne nettsiden er et Vite React prosjekt med Tailwind, Javascript og HTML5.
+            Prosjektet er bygd opp i komponenter og kodet i Visual Studio Code.
           </p>
           <p className="flex gap-4 text-2xl pt-4">
             <TechIcons.vite />
-
             <TechIcons.react />
-
             <TechIcons.tailwind />
-
             <TechIcons.javascript />
-
             <TechIcons.html5 />
-
             <TechIcons.github />
-
             <TechIcons.vscode />
           </p>
         </div>
 
         {/* Navigation */}
         <div className="space-y-2 text-sm">
-          <h3 className="font-semibold text-creamy uppercase tracking-wide">
-            Finn frem
-          </h3>
+          <h3 className="font-semibold text-creamy uppercase tracking-wide">Finn frem</h3>
           <ul className="space-y-1">
             <li>
-              <a href="/home" className="hover:underline hover:text-sunny">
+              <Link to="/home" className="hover:underline hover:text-sunny">
                 Hjem
-              </a>
+              </Link>
             </li>
             <li>
               <a href="/contact" className="hover:underline hover:text-sunny">
@@ -86,6 +62,7 @@ export function Footer() {
               <button
                 onClick={handleScrollToEducation}
                 className="hover:underline hover:text-sunny text-left"
+                aria-label="Gå til utdanningsseksjon"
               >
                 Min utdanning
               </button>
@@ -94,17 +71,19 @@ export function Footer() {
               <button
                 onClick={handleScrollToCV}
                 className="hover:underline hover:text-sunny text-left"
+                aria-label="Gå til erfaringsseksjon"
               >
                 Min erfaring
               </button>
             </li>
             <li>
-                <button
+              <button
                 onClick={handleScrollToPortfolio}
                 className="hover:underline hover:text-sunny text-left"
-                >
-                    Se Portfolio
-                </button>
+                aria-label="Gå til portfolioseksjon"
+              >
+                Se Portfolio
+              </button>
             </li>
           </ul>
         </div>
@@ -146,9 +125,7 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="mt-10 pt-6 border-t border-creamy/20 text-sm text-center text-creamy/60">
         <p>© {new Date().getFullYear()} Anette Therese Lindberg.</p>
-        <p className="italic text-xs text-yellow-800 pt-4">
-          Hvorfor titter du her?
-        </p>
+        <p className="italic text-xs text-yellow-800 pt-4">Hvorfor titter du her?</p>
       </div>
     </footer>
   );

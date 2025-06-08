@@ -1,5 +1,5 @@
-// eslint-disable-next-line no-unused-vars
-function InfoCard({ icon: Icon, text, bgImage, scrollId, ariaLabel }) {
+export default function InfoCard(props) {
+  const { icon: Icon, text, bgImage, scrollId, ariaLabel } = props;
   const baseStyle = {
     backgroundImage: `linear-gradient(to bottom right, rgba(108, 118, 74, 0.85), rgba(32, 19, 9, 0.85)), url(${bgImage})`,
     backgroundSize: "cover",
@@ -24,17 +24,15 @@ function InfoCard({ icon: Icon, text, bgImage, scrollId, ariaLabel }) {
       role="button"
       tabIndex={0}
       aria-label={ariaLabel}
-      className="text-white p-2 rounded-2xl flex w-full lg:w-[370px] transform transition-transform duration-300 hover:scale-105 shadow-lg mx-auto"
       style={baseStyle}
+      className="text-white p-2 rounded-2xl transition-transform duration-300 hover:scale-105 shadow-lg flex justify-between"
     >
-      <div className="flex-shrink-0 w-24 h-24 flex items-center justify-center">
-        <Icon className="text-7xl text-white" />
+      <div className="w-1/6 lg:w-full h-24 flex items-center justify-center mx-auto mb-0">
+        <Icon className="text-6xl lg:text-7xl text-white" />
       </div>
-      <div className="flex items-center text-sm p-2">
+      <div className="flex items-center text-sm p-2 lg:p-0">
         <p>{text}</p>
       </div>
     </div>
   );
 }
-
-export default InfoCard;

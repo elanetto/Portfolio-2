@@ -10,6 +10,7 @@ import Nettbutikk from "./Pages/Portfolio/eShop";
 import Contact from "./Pages/Contact";
 import { Toaster } from "react-hot-toast";
 import { ScrollProvider } from "./context/ScrollProvider";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -37,20 +38,22 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ScrollProvider>
-      <RouterProvider router={router} />
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          duration: 4000,
-          style: {
-            background: "#201309",
-            color: "#fff",
-            borderRadius: "12px",
-            padding: "12px 16px",
-          },
-        }}
-      />
-    </ScrollProvider>
+    <HelmetProvider>
+      <ScrollProvider>
+        <RouterProvider router={router} />
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: "#201309",
+              color: "#fff",
+              borderRadius: "12px",
+              padding: "12px 16px",
+            },
+          }}
+        />
+      </ScrollProvider>
+    </HelmetProvider>
   </StrictMode>
 );

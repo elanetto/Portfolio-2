@@ -1,7 +1,7 @@
 import { MdLooks5, MdLooks6 } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa";
 import backgroundImage1 from "../../assets/images/anette-goldsmiths-wow.jpg";
-import backgroundImage2 from "../../assets/images/anette-goldsmiths-wow-2.jpg";
+import backgroundImage2 from "../../assets/images/anette-goldsmiths-wow-3.jpg";
 import backgroundImage3 from "../../assets/images/school-projects-hero.jpg";
 
 function InfoCards() {
@@ -23,6 +23,13 @@ function InfoCards() {
       {/* Card 1 */}
       <div
         onClick={() => scrollToSection("cv")}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            scrollToSection("cv");
+          }
+        }}
+        role="button"
+        tabIndex={0}
         className="text-white p-2 rounded-2xl flex w-full lg:w-[370px] transform transition-transform duration-300 hover:scale-105 shadow-lg mx-auto"
         style={baseStyle(backgroundImage1)}
       >
@@ -33,7 +40,8 @@ function InfoCards() {
           <p>
             5 års erfaring innen{" "}
             <span className="font-bold text-white">Digital Markedsføring</span>,
-            Art Direction og Grafisk Design: Sosiale medier, foto, innhold til nettsider, logo, og mer.
+            Art Direction og Grafisk Design: Sosiale medier, foto, innhold til
+            nettsider.
           </p>
         </div>
       </div>
@@ -41,6 +49,13 @@ function InfoCards() {
       {/* Card 2 */}
       <div
         onClick={() => scrollToSection("cv")}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            scrollToSection("cv");
+          }
+        }}
+        role="button"
+        tabIndex={0}
         className="text-white p-2 rounded-2xl flex w-full lg:w-[370px] transform transition-transform duration-300 hover:scale-105 shadow-lg mx-auto"
         style={baseStyle(backgroundImage2)}
       >
@@ -50,7 +65,8 @@ function InfoCards() {
         <div className="flex items-center text-sm p-2 md:py-0">
           <p>
             6 års erfaring som{" "}
-            <span className="font-bold text-white">lektor</span> i medier, både som høyskolelektor, ungdomsskolelærer, trinnkoordinator og
+            <span className="font-bold text-white">lektor</span> i medier, både
+            som høyskolelektor, ungdomsskolelærer, trinnkoordinator og
             IKT-ansvarlig.
           </p>
         </div>
@@ -59,6 +75,13 @@ function InfoCards() {
       {/* Card 3 */}
       <div
         onClick={() => scrollToSection("education")}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            scrollToSection("education");
+          }
+        }}
+        role="button"
+        tabIndex={0}
         className="text-white p-2 rounded-2xl flex w-full lg:w-[370px] transform transition-transform duration-300 hover:scale-105 shadow-lg mx-auto"
         style={baseStyle(backgroundImage3)}
       >

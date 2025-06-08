@@ -7,7 +7,6 @@ import AnetteImg2 from "./../../assets/images/anette_hero.jpg";
 import SocialsImgBg from "./../../assets/images/school-projects-hero.jpg";
 import { useNavigate } from "react-router-dom";
 import SocialIcons from "./../../components/Icons/SocialIcons";
-import { Helmet } from "react-helmet-async";
 
 function launchConfetti() {
   confetti({
@@ -62,18 +61,6 @@ export default function Contact() {
       className="min-h-screen px-4 py-20 max-w-[800px] mx-auto text-dark-green"
       aria-labelledby="contact-heading"
     >
-      <Helmet>
-        <title>Kontakt Anette Therese | Front-End Developer</title>
-        <meta
-          name="description"
-          content="Ta kontakt med Anette Therese Lindberg for nettsideprosjekter, design, eller samarbeid. Jeg svarer deg så snart jeg kan!"
-        />
-        <link
-          rel="canonical"
-          href="https://anette-portfolio.onrender.com/contact"
-        />
-      </Helmet>
-
       <div>
         {/* Hero image with overlay */}
         <div

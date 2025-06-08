@@ -1,11 +1,20 @@
 // eslint-disable-next-line no-unused-vars
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useRef, useEffect } from "react";
 import backgroundImage from "../../assets/images/anette-goldsmiths-wow.jpg";
 
 export default function CVTimeline() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { threshold: 0.3 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
 
   const experiences = [
     {
@@ -66,7 +75,7 @@ export default function CVTimeline() {
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(108, 118, 74, 0.9), rgba(32, 19, 9, 0.9)), url(${backgroundImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "45% center",
+        backgroundPosition: "46% center",
       }}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-18 md:px-4">
@@ -75,10 +84,13 @@ export default function CVTimeline() {
         </h2>
 
         <div ref={ref} className="relative">
-          {/* Animated vertical line */}
           <motion.div
-            initial={{ height: 0 }}
-            animate={isInView ? { height: "100%" } : {}}
+            variants={{
+              hidden: { height: 0 },
+              visible: { height: "100%" },
+            }}
+            initial="hidden"
+            animate={controls}
             transition={{ duration: 2, ease: "easeOut" }}
             className="absolute left-1/2 top-0 w-1 bg-green-500 hidden md:block"
             style={{ transform: "translateX(-50%)" }}
@@ -97,14 +109,18 @@ export default function CVTimeline() {
                     </p>
                     <h3 className="text-xl font-bold uppercase">{exp.title}</h3>
                     <p className="font-semibold text-white">{exp.role}</p>
-                    <p className="text-white mt-2 max-w-md ml-0 md:ml-auto text-sm">
+                    <p className="text-white mt-2 max-w-sm ml-0 md:ml-auto text-sm">
                       {exp.description}
                     </p>
                   </div>
 
                   <motion.div
-                    initial={{ scale: 0 }}
-                    animate={isInView ? { scale: 1 } : {}}
+                    variants={{
+                      hidden: { scale: 0 },
+                      visible: { scale: 1 },
+                    }}
+                    initial="hidden"
+                    animate={controls}
                     transition={{ delay: 0.4, duration: 1 }}
                     className="hidden md:flex relative z-10 w-10 bottom-18 justify-center"
                   >
@@ -118,8 +134,12 @@ export default function CVTimeline() {
                   <div className="hidden md:block w-full md:w-1/2" />
 
                   <motion.div
-                    initial={{ scale: 0 }}
-                    animate={isInView ? { scale: 1 } : {}}
+                    variants={{
+                      hidden: { scale: 0 },
+                      visible: { scale: 1 },
+                    }}
+                    initial="hidden"
+                    animate={controls}
                     transition={{ delay: 0.4, duration: 1 }}
                     className="hidden md:flex relative z-10 w-10 bottom-16 justify-center"
                   >

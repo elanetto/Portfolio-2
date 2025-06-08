@@ -31,9 +31,9 @@ const cards = [
 
 function InfoCards() {
   return (
-    <div className="flex flex-wrap justify-between max-w-[1200px] mx-auto mt-8 px-4 md:px-0 space-y-4 md:space-y-0 cursor-pointer">
-      {cards.map((card, index) => (
-        <InfoCard key={index} {...card} />
+    <div className="flex flex-wrap justify-between max-w-[1200px] mx-auto mt-8 px-4 md:px-0 space-y-4 md:space-y-0">
+      {cards.map((card) => (
+        <InfoCard key={card.scrollId} {...card} />
       ))}
     </div>
   );

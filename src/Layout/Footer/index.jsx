@@ -40,15 +40,32 @@ export function Footer() {
             og HTML5. Prosjektet er bygd opp i komponenter og kodet i Visual
             Studio Code.
           </p>
-          <div className="flex gap-4 text-2xl pt-4">
-            <TechIcons.vite />
-            <TechIcons.react />
-            <TechIcons.tailwind />
-            <TechIcons.javascript />
-            <TechIcons.html5 />
-            <TechIcons.github />
-            <TechIcons.vscode />
-          </div>
+          <ul
+            className="flex gap-4 text-2xl pt-4"
+            aria-label="Tech stack icons"
+          >
+            <li>
+              <TechIcons.vite />
+            </li>
+            <li>
+              <TechIcons.react />
+            </li>
+            <li>
+              <TechIcons.tailwind />
+            </li>
+            <li>
+              <TechIcons.javascript />
+            </li>
+            <li>
+              <TechIcons.html5 />
+            </li>
+            <li>
+              <TechIcons.github />
+            </li>
+            <li>
+              <TechIcons.vscode />
+            </li>
+          </ul>
         </div>
 
         {/* Navigation */}

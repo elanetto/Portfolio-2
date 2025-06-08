@@ -14,7 +14,7 @@ const auctionHouseText =
   "En auksjonsnettside hvor man kan søke, by på og delta på auksjoner. Man kan også legge ut egne produkter. WAP-vennlig design. Lag din egen bruker for å delta på auksjoner.";
 
 const eShopText =
-  "Et enkel e-handelsnettsted hvor man kan søke etter produkter og 'kjøpe' dem. Brukervennlig kasse-system og enkel åpning av produkter. Skreddersydd for mobil og nettbrett.";
+  "Et e-handelsnettsted hvor man kan søke etter produkter og 'kjøpe' dem. Brukervennlig kasse-system og enkel åpning av produkter. Skreddersydd for mobil og nettbrett.";
 
 function ProductList() {
   return (

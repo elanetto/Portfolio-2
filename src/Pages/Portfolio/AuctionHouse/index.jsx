@@ -11,7 +11,7 @@ function AuctionHouse() {
       title="Auction House"
       description="Auction House er et auksjonsnettsted utviklet som mitt semesterprosjekt, laget første halvdel av mitt andre år av Frontend-utdanningen min ved Noroff. Målet var å bygge en fullverdig nettapplikasjon hvor brukere kan opprette, by på og administrere auksjoner – kun ved bruk av HTML, JavaScript, og en valgt CSS-rammeverk. Jeg valgte å bruke Tailwind CSS og Vite for å optimalisere utviklingsflyten."
       reflections="Når jeg ser over denne oppgaven bare et halvt år senere, så har jeg vokst så mye som utvikler at jeg ser flere muligheter for å løfte dette til et mye bedre prosjekt. 
-      Prosjektet kunne med fordel ha brukt APIen bedre med både søkemotor og innhenting av alle produkter. I tillegg skulle alle brukere ha fått sett på sin side hvilke auctions de aktivt byr på nå. Prosjektet ville også ha hatt en bedre flyt om det var bygd med komponeneter i React, heller enn i ren JavaScript."
+      Prosjektet kunne med fordel ha brukt APIen bedre med både søkemotor og innhenting av alle produkter. I tillegg skulle alle brukere ha fått sett på sin side hvilke auctions de aktivt byr på nå. Prosjektet ville også ha hatt en bedre flyt om det var bygd med komponenter i React, heller enn i ren JavaScript."
       images={[
         AuctionHouseImg1,
         AuctionHouseImg2,

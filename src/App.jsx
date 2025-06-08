@@ -1,7 +1,7 @@
 import HomeHero from "./components/HomeHero";
 import InfoCards from "./components/InfoCards";
 import ProductList from "./components/ProductList";
-import CVTimeline from "./components/CV/CVTimeline";
+import CVTimeline from "./components/CV/TimelineCV.jsx";
 import EducationTimeline from "./components/CV/EducationTimeline";
 import ContactCTA from "./components/ContactCTA";
 

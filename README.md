@@ -1,6 +1,6 @@
 # Portfolio: Anette Therese
 
-![image](https://raw.githubusercontent.com/elanetto/Portfolio-2/refs/heads/main/src/assets/readme-img/readme-homepage.jpg)
+![image](https://raw.githubusercontent.com/elanetto/Portfolio-2/refs/heads/main/src/assets/readme-img/readme-homepage-two.jpg)
 [Anettes Portfolio site](https://anette-portfolio.onrender.com/)
 
 

@@ -48,6 +48,8 @@ export default function Contact() {
         setFormData({ name: "", email: "", message: "" });
         toast.success("Meldingen ble sendt! ✨");
         launchConfetti();
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
       })
       .catch((err) => {
         console.error("Email send error:", err);
@@ -56,9 +58,29 @@ export default function Contact() {
       });
   }
 
-  return (
+  return submitted ? (
     <section
-      className="min-h-screen px-4 py-20 max-w-[800px] mx-auto text-dark-green"
+      className="min-h-screen flex flex-col justify-center items-center text-white text-center px-6 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.85), rgba(32, 19, 9, 0.85)), url(${AnetteImg})`,
+      }}
+    >
+      <div className="z-10 max-w-lg mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Tusen takk!</h2>
+        <p className="text-lg md:text-xl mb-6">
+          Meldingen din er sendt 🌱 Jeg svarer deg så snart jeg kan!
+        </p>
+        <button
+          onClick={() => navigate("/")}
+          className="bg-leaf-green text-black font-semibold px-6 py-3 rounded-full hover:bg-dark-green hover:text-white transition-colors duration-300 shadow-md"
+        >
+          Tilbake til forsiden
+        </button>
+      </div>
+    </section>
+  ) : (
+    <section
+      className="min-h-screen max-w-[1200px] mx-auto text-dark-green"
       aria-labelledby="contact-heading"
     >
       <div>
@@ -114,164 +136,141 @@ export default function Contact() {
             </p>
           </div>
         </div>
-      </div>
 
-      {submitted ? (
         <div
-          className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg"
+          className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-14"
           style={{
-            backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.85), rgba(32, 19, 9, 0.85)), url(${AnetteImg})`,
+            backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.55), rgba(32, 19, 9, 0.55)), url(${AnetteImg})`,
           }}
         >
           <div className="relative z-10 max-w-lg mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Tusen takk!</h2>
-            <p className="text-lg md:text-xl">
-              Meldingen din er sendt 🌱 Jeg svarer deg så snart jeg kan!
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kontakt meg</h2>
+            <p className="text-lg md:text-xl">Send meg gjerne en melding her</p>
           </div>
+        </div>
+
+        {/* Kontakt skjema */}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center space-y-6 max-w-[600px] w-full mx-auto px-4"
+        >
+          <div className="w-full">
+            <label htmlFor="name" className="block font-semibold mb-1">
+              Fullt navn
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
+            />
+          </div>
+
+          <div className="w-full">
+            <label htmlFor="email" className="block font-semibold mb-1">
+              E-postadresse
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
+            />
+          </div>
+
+          <div className="w-full">
+            <label htmlFor="message" className="block font-semibold mb-1">
+              Melding
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              minLength={5}
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
+            />
+            <p className="text-sm text-gray-600 mt-1">Minst 5 tegn</p>
+          </div>
+
           <button
-            onClick={() => navigate("/")}
-            className="mt-8 bg-leaf-green text-black font-semibold px-6 py-3 rounded-full hover:bg-dark-green hover:text-white transition-colors duration-300 shadow-md"
+            type="submit"
+            className="bg-cyan-blue text-black font-semibold px-6 py-3 rounded-full hover:bg-dark-green hover:text-white transition-colors duration-300 shadow-md"
           >
-            Tilbake til forsiden
+            Send melding
           </button>
-        </div>
-      ) : (
-        <div>
-          <div
-            className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-14"
-            style={{
-              backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.55), rgba(32, 19, 9, 0.55)), url(${AnetteImg})`,
-            }}
-          >
-            <div className="relative z-10 max-w-lg mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Kontakt meg
-              </h2>
-              <p className="text-lg md:text-xl">
-                Send meg gjerne en melding her
-              </p>
-            </div>
-          </div>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block font-semibold mb-1">
-                Fullt navn
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
-              />
-            </div>
 
-            <div>
-              <label htmlFor="email" className="block font-semibold mb-1">
-                E-postadresse
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
-              />
-            </div>
+          {error && <p className="text-red-500 text-sm mt-4">{error}</p>}
+        </form>
 
-            <div>
-              <label htmlFor="message" className="block font-semibold mb-1">
-                Melding
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                rows="5"
-                minLength={5}
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-blue"
-              />
-              <p className="text-sm text-gray-600 mt-1">Minst 5 tegn</p>
-            </div>
+        <div
+          className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-12 mt-12"
+          style={{
+            backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.9), rgba(48, 102, 109, 0.9)), url(${SocialsImgBg})`,
+          }}
+        >
+          <div className="relative z-10 max-w-xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              ...eller email meg:
+            </h2>
+            <p className="pb-24">
+              <button
+                onClick={() =>
+                  (window.location.href = [
+                    "mailto:",
+                    "kontakt",
+                    "@",
+                    "anettetherese",
+                    ".no",
+                  ].join(""))
+                }
+                className="underline text-white hover:text-cyan-blue cursor-pointer"
+                aria-label="Send e-post til kontakt@anettetherese.no"
+              >
+                {["kontakt", "@", "anettetherese", ".", "no"].join("")}
+              </button>
+            </p>
 
-            <button
-              type="submit"
-              className="bg-cyan-blue text-black font-semibold px-6 py-3 rounded-full hover:bg-dark-green hover:text-white transition-colors duration-300 shadow-md"
-            >
-              Send melding
-            </button>
-
-            {error && <p className="text-red-500 text-sm mt-4">{error}</p>}
-          </form>
-
-          <div
-            className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-12 mt-12"
-            style={{
-              backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.9), rgba(48, 102, 109, 0.9)), url(${SocialsImgBg})`,
-            }}
-          >
-            <div className="relative z-10 max-w-xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                ...eller email meg:
-              </h2>
-              <p className="pb-24">
-                <button
-                  onClick={() =>
-                    (window.location.href = [
-                      "mailto:",
-                      "kontakt",
-                      "@",
-                      "anettetherese",
-                      ".no",
-                    ].join(""))
-                  }
-                  className="underline text-white hover:text-cyan-blue cursor-pointer"
-                  aria-label="Send e-post til kontakt@anettetherese.no"
-                >
-                  {["kontakt", "@", "anettetherese", ".", "no"].join("")}
-                </button>
-              </p>
-
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Du kan også finne meg på:
-              </h2>
-              <div className="flex justify-center gap-4">
-                <a
-                  href="https://www.linkedin.com/in/anettetherese/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Besøk LinkedIn-profilen til Anette Therese"
-                >
-                  {SocialIcons.linkedin()}
-                </a>
-                <a
-                  href="https://www.instagram.com/elanetto/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Besøk Instagram-profilen til Anette: Elanetto"
-                >
-                  {SocialIcons.instagram()}
-                </a>
-                <a
-                  href="https://github.com/elanetto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Besøk GitHub-profilen til Anette: Elanetto"
-                >
-                  {SocialIcons.github()}
-                </a>
-              </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Du kan også finne meg på:
+            </h2>
+            <div className="flex justify-center gap-4">
+              <a
+                href="https://www.linkedin.com/in/anettetherese/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Besøk LinkedIn-profilen til Anette Therese"
+              >
+                {SocialIcons.linkedin()}
+              </a>
+              <a
+                href="https://www.instagram.com/elanetto/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Besøk Instagram-profilen til Anette: Elanetto"
+              >
+                {SocialIcons.instagram()}
+              </a>
+              <a
+                href="https://github.com/elanetto"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Besøk GitHub-profilen til Anette: Elanetto"
+              >
+                {SocialIcons.github()}
+              </a>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </section>
   );
 }

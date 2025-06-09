@@ -1,64 +1,58 @@
-import { FaReact, FaHtml5, FaGithub, FaCode } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss, SiVite, SiFigma } from "react-icons/si";
+// src/components/Icons/TechIcons.jsx
+import {
+  FaReact,
+  FaHtml5,
+  FaGithub,
+  FaJsSquare,
+  FaFigma,
+} from "react-icons/fa";
+import { SiTailwindcss, SiVite } from "react-icons/si";
+import { VscCode } from "react-icons/vsc";
 import TooltipWrapper from "./../TooltipWrapper";
 
+const iconStyle = "w-6 h-6";
+
 const TechIcons = {
-  react: function ReactIcon() {
-    return (
-      <TooltipWrapper text="React">
-        <FaReact />
-      </TooltipWrapper>
-    );
-  },
-  html5: function Html5Icon() {
-    return (
-      <TooltipWrapper text="HTML5">
-        <FaHtml5 />
-      </TooltipWrapper>
-    );
-  },
-  github: function GitHubIcon() {
-    return (
-      <TooltipWrapper text="GitHub">
-        <FaGithub />
-      </TooltipWrapper>
-    );
-  },
-  vscode: function VSCodeIcon() {
-    return (
-      <TooltipWrapper text="Visual Studio Code">
-        <FaCode />
-      </TooltipWrapper>
-    );
-  },
-  javascript: function JavaScriptIcon() {
-    return (
-      <TooltipWrapper text="JavaScript">
-        <SiJavascript />
-      </TooltipWrapper>
-    );
-  },
-  tailwind: function TailwindIcon() {
-    return (
-      <TooltipWrapper text="Tailwind CSS">
-        <SiTailwindcss />
-      </TooltipWrapper>
-    );
-  },
-  vite: function ViteIcon() {
-    return (
-      <TooltipWrapper text="Vite">
-        <SiVite />
-      </TooltipWrapper>
-    );
-  },
-  figma: function FigmaIcon() {
-    return (
-      <TooltipWrapper text="Figma">
-        <SiFigma />
-      </TooltipWrapper>
-    );
-  },
+  react: () => (
+    <TooltipWrapper text="React">
+      <FaReact className={iconStyle} aria-hidden="true" />
+    </TooltipWrapper>
+  ),
+  html5: () => (
+    <TooltipWrapper text="HTML5">
+      <FaHtml5 className={iconStyle} aria-hidden="true" />
+    </TooltipWrapper>
+  ),
+  github: () => (
+    <TooltipWrapper text="GitHub">
+      <FaGithub className={iconStyle} aria-hidden="true" />
+    </TooltipWrapper>
+  ),
+  vscode: () => (
+    <TooltipWrapper text="Visual Studio Code">
+      <VscCode className={iconStyle} aria-hidden="true" />
+    </TooltipWrapper>
+  ),
+  javascript: () => (
+    <TooltipWrapper text="JavaScript">
+      <FaJsSquare className={iconStyle} aria-hidden="true" />
+    </TooltipWrapper>
+  ),
+  tailwind: () => (
+    <TooltipWrapper text="Tailwind CSS">
+      <SiTailwindcss className={iconStyle} aria-hidden="true" />
+    </TooltipWrapper>
+  ),
+  vite: () => (
+    <TooltipWrapper text="Vite">
+      <SiVite className={iconStyle} aria-hidden="true" />
+    </TooltipWrapper>
+  ),
+  figma: () => (
+    <TooltipWrapper text="Figma">
+      <FaFigma className={iconStyle} aria-hidden="true" />
+    </TooltipWrapper>
+  ),
 };
 
 export default TechIcons;

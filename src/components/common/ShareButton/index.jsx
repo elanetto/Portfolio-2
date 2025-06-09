@@ -7,7 +7,21 @@ function ShareButton({ label = "Kopier lenke" }) {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      const textToCopy = window.location.href;
+
+      if (navigator.clipboard && window.isSecureContext) {
+       
+        await navigator.clipboard.writeText(textToCopy);
+      } else {
+        
+        const textArea = document.createElement("textarea");
+        textArea.value = textToCopy;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+      }
+
       if (!copied) toast.success("Lenken er kopiert til utklippstavlen!");
       setCopied(true);
     } catch (err) {

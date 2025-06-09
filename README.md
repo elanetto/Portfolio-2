@@ -32,6 +32,7 @@ This project was created using these tools and technologies:
 - [Framer Motion](https://motion.dev/)
 - [emailjs](https://www.emailjs.com/)
 - [confetti](https://www.npmjs.com/package/react-canvas-confetti)
+- [Carousel](https://www.npmjs.com/package/react-responsive-carousel)
 
 ## Extras
 To add to the site, I added animated timelines for my work experience and education. This was to enhance both the experience and the value of the site.

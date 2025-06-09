@@ -71,7 +71,7 @@ export default function CVTimeline() {
   return (
     <section
       id="cv"
-      className="relative text-white py-20 max-w-[1200px] mx-auto mt-12"
+      className="relative text-white py-20 mx-auto"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(108, 118, 74, 0.9), rgba(32, 19, 9, 0.9)), url(${backgroundImage})`,
         backgroundSize: "cover",

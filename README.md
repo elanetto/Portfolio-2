@@ -1,9 +1,7 @@
-PS: This is a placeholder ReadMe to get started. The readme here is a copy-paste from my old Portfolio:
+# Portfolio: Anette Therese
 
-# My Portfolio
-
-![image](https://github.com/elanetto/portfolio/blob/main/assets/images/portfolio/portfolio.png?raw=true)
-[anettetherese.no](https://portfolio-ten-eta-98.vercel.app/)
+![image](https://raw.githubusercontent.com/elanetto/Portfolio-2/refs/heads/main/src/assets/readme-img/readme-homepage.jpg)
+[Anettes Portfolio site](https://anette-portfolio.onrender.com/)
 
 
 ## Description
@@ -11,50 +9,57 @@ PS: This is a placeholder ReadMe to get started. The readme here is a copy-paste
 The goal of this project is to showcase my skills as a FrontEnd Developer for the job market.
 This site showcases these projects:
 
-- [Wedding Website](https://github.com/elanetto/wedding)
-- [Game Hub](https://github.com/elanetto/game-hub)
-- [Science Museum](https://github.com/elanetto/science-museum)
-- [Escape the Classroom](https://github.com/elanetto/elanetto.github.io/tree/main)
+- [Holidaze](https://dev-holiday.onrender.com/)
+- [Auction House](https://regal-travesseiro-0cbb67.netlify.app/)
+- [eShop](https://online-shop-ca-anette.netlify.app/)
+
+![image](https://raw.githubusercontent.com/elanetto/Portfolio-2/refs/heads/main/src/assets/readme-img/readme-portfoliocards.jpg)
 
 ## Tools and technology
-My portfolio is built with HTML and CSS, and it was first designed and planned in Figma.
-![image](https://github.com/elanetto/portfolio/blob/main/assets/images/readme/badges-html-figma-css.png?raw=true)
+This project was created using these tools and technologies:
+- Vite
+- React
+- JavaScript
+- Tailwind CSS
+- HTML
+- Adobe Photoshop
+- Figma
 
-## Figma
-Check out my Figma-file [here](https://www.figma.com/design/vBWtxr0SAQVuYMFrWea3Uw/portfolio-site?node-id=44-96&t=ndQsyqWru8d5nmZG-1)
+## Extras
+To add to the site, I added animated timelines for my work experience and education. This was to enhance both the experience and the value of the site.
 
-## What was the assignment?
-We were given a brief from Noroff about creating our own portfolio website. 
+![image](https://raw.githubusercontent.com/elanetto/Portfolio-2/refs/heads/main/src/assets/readme-img/readme-timeline.jpg)
 
-- The target audience is possible employers
-- Showcase at least 3 projects
-- Write ReadMe-files for the projects
-- Presenting our finished project for the class
 
-I did present my portfolio webpage and the chosen projects to highlight. My presentation inclueded a PowerPoint.
+# 🌿 How to fork and use this project yourself 🌿 
 
-## How was the process?
-I was eager to start, and started with Figma. I wanted to use colours and illustrations, as well as images and anecdotes.
-My site is created entiraly in HTML and CSS, and I have been editing small details again and again to make ut just right.
+## 🛠️ Prerequisites
+- A program to code in (Like Visual Studio Code)
 
-## Learning Points & self assesment
-I have learned a lot. Something so simple as to set a background-image in CSS to a div, and then have a div with a text-box within that div, to create a floating-over-image effect with the text. I used to do this with position: absolute; earlier. Using position: absolute always ruined the rest of the layout, and as I love using Flex, this simple way of getting the results I wanted blew my mind!
-
+## 🛠️ Installation
+1. Clone the repository:
 ```bash
-.hero {
-background-image: url("assets/images/hero/anette_hero_small.jpeg");
-}
-
-.over-hero {
-    color: var(--white);
-    filter: drop-shadow(0 0 0.75rem black);
-}
+git clone https://github.com/elanetto/Portfolio-2.git
 ```
 
-What can be done better? Well, I used CSS to create the dropdown-menu of this site, but I could have used JavaScript. I could also add more hover-effects to the portfolio-cards and other clickable links.
+2. Navigate to the project folder, if you are not already there:
+```bash
+cd Portfolio-2
+```
+
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Run the project:
+```bash
+npm run dev
+```
+
 
 ## Contact
-You can reach me at my email: hei@anettetherese.no
+You can reach me at my email: kontakt@anettetherese.no
 
 Or, simply find me at [LinkedIn](https://www.linkedin.com/in/anettetherese/)
 

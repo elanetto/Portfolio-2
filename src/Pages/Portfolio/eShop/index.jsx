@@ -22,12 +22,12 @@ function Nettbutikk() {
         `}
       images={[eShopImg1, eShopImg2, eShopImg3]}
       icons={[
-        TechIcons.react,
-        TechIcons.tailwind,
-        TechIcons.javascript,
-        TechIcons.vite,
-        TechIcons.html5,
         TechIcons.github,
+        TechIcons.vite,
+        TechIcons.react,
+        TechIcons.javascript,
+        TechIcons.tailwind,
+        TechIcons.html5,
       ]}
       liveLink="https://online-shop-ca-anette.netlify.app/"
       githubLink="https://github.com/elanetto/online-shop-CA"

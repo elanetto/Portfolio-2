@@ -125,7 +125,7 @@ export function Footer() {
           <h3 className="font-semibold text-creamy uppercase tracking-wide text-sm">
             Følg meg
           </h3>
-          <div className="flex gap-2">
+          <div className="flex pt-2 gap-4">
             <a
               href="https://www.linkedin.com/in/anettetherese/"
               target="_blank"

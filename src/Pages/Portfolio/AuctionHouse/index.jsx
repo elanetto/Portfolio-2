@@ -21,7 +21,6 @@ function AuctionHouse() {
         I tillegg skulle alle brukere ha fått sett på sin side hvilke auctions de aktivt byr på nå.
 
         Prosjektet ville også ha hatt en bedre flyt om det var bygd med komponenter i React, heller enn i ren JavaScript.`}
-        
       images={[
         AuctionHouseImg1,
         AuctionHouseImg2,
@@ -29,11 +28,12 @@ function AuctionHouse() {
         AuctionHouseImg4,
       ]}
       icons={[
-        TechIcons.tailwind,
-        TechIcons.javascript,
-        TechIcons.vite,
-        TechIcons.html5,
         TechIcons.github,
+        TechIcons.vite,
+        TechIcons.javascript,
+        TechIcons.tailwind,
+        TechIcons.html5,
+        TechIcons.figma,
       ]}
       liveLink="https://regal-travesseiro-0cbb67.netlify.app/"
       githubLink="https://github.com/elanetto/auction-semester-project"

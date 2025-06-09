@@ -1,7 +1,7 @@
 import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaGithub } from "react-icons/fa";
 import TooltipWrapper from "./../TooltipWrapper";
 
-const iconStyle = "text-white text-2xl hover:scale-110 transition-transform";
+const iconStyle = "text-white text-2xl hover:scale-125 hover:text-green-bright transition-transform";
 
 const SocialIcons = {
   linkedin: () => (

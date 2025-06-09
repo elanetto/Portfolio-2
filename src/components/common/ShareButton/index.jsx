@@ -2,6 +2,8 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Copy } from "lucide-react";
 
+const COPY_FEEDBACK_DURATION = 3000;
+
 function ShareButton({ label = "Kopier lenke" }) {
   const [copied, setCopied] = useState(false);
 
@@ -10,7 +12,7 @@ function ShareButton({ label = "Kopier lenke" }) {
       await navigator.clipboard.writeText(window.location.href);
       setCopied(true);
       toast.success("Lenken er kopiert til utklippstavlen!");
-      setTimeout(() => setCopied(false), 3000);
+      setTimeout(() => setCopied(false), COPY_FEEDBACK_DURATION);
     } catch (err) {
       toast.error("Klarte ikke å kopiere lenken.");
       console.error("Copy failed", err);

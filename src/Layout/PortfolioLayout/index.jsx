@@ -1,6 +1,6 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { splitTextIntoParagraphs } from "./../../utils/splitText";
+import { splitTextIntoParagraphs } from "../../utils/splitText";
 
 function PortfolioLayout({
   title,

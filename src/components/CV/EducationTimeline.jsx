@@ -70,7 +70,7 @@ export default function EducationTimeline() {
   return (
     <section
       id="education"
-      className="relative text-white py-20 max-w-[1200px] mx-auto"
+      className="relative text-white py-20 mx-auto"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(48, 102, 109, 0.9), rgba(32, 19, 9, 0.9)), url(${backgroundImage})`,
         backgroundSize: "cover",

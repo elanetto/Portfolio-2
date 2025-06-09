@@ -31,7 +31,7 @@ This project was created using these tools and technologies:
 - [React Icons](https://react-icons.github.io/react-icons/) --> Icons
 - [Lucide React](https://www.npmjs.com/package/lucide-react) --> Icons
 - [Framer Motion](https://motion.dev/) --> Smooth animations
-- [emailjs](https://www.emailjs.com/) --> Send emails to me througha contact form
+- [emailjs](https://www.emailjs.com/) --> Send emails to me through a contact form
 - [confetti](https://www.npmjs.com/package/react-canvas-confetti) --> Festive confetti
 - [Carousel](https://www.npmjs.com/package/react-responsive-carousel) --> Responsive image carousel
 

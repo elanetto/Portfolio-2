@@ -36,6 +36,9 @@ function PortfolioLayout({
             <div
               key={index}
               onClick={() => setSelectedImage(img)}
+              onKeyDown={(e) => e.key === "Enter" && setSelectedImage(img)}
+              role="button"
+              tabIndex={0}
               className="cursor-zoom-in"
             >
               <img
@@ -134,10 +137,11 @@ function PortfolioLayout({
             onClick={(e) => e.stopPropagation()}
           />
           <button
-            className="absolute top-4 right-4 text-white text-3xl font-bold"
             onClick={() => setSelectedImage(null)}
+            aria-label="Close modal"
+            className="absolute top-4 right-4 text-white text-3xl font-bold"
           >
-            ×
+            &times;
           </button>
         </div>
       )}

@@ -137,7 +137,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* 💡 THIS is the missing div that caused the broken JSX: */}
         <div
           className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-14"
           style={{

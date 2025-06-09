@@ -14,6 +14,7 @@ This site showcases these projects:
 - [eShop](https://online-shop-ca-anette.netlify.app/)
 
 ![image](https://raw.githubusercontent.com/elanetto/Portfolio-2/refs/heads/main/src/assets/readme-img/readme-portfoliocards.jpg)
+The portfolio cards will show am animated sneak peak of the sites in use when you hover over them.
 
 ## Tools and technology
 This project was created using these tools and technologies:
@@ -24,6 +25,13 @@ This project was created using these tools and technologies:
 - HTML
 - Adobe Photoshop
 - Figma
+
+## React NPM Packages
+- [Toast](https://www.npmjs.com/package/react-toastify)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Framer Motion](https://motion.dev/)
+- [emailjs](https://www.emailjs.com/)
+- [confetti](https://www.npmjs.com/package/react-canvas-confetti)
 
 ## Extras
 To add to the site, I added animated timelines for my work experience and education. This was to enhance both the experience and the value of the site.
@@ -56,7 +64,11 @@ npm install
 ```bash
 npm run dev
 ```
+Open the localhost page you now get in the browser.
 
+Mine opened up as: http://localhost:5173/
+
+Have fun! 🌱
 
 ## Contact
 You can reach me at my email: kontakt@anettetherese.no

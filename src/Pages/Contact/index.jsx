@@ -80,19 +80,21 @@ export default function Contact() {
     </section>
   ) : (
     <section
-      className="min-h-screen max-w-[1200px] mx-auto text-dark-green"
+      className="min-h-screen mx-auto text-dark-green"
       aria-labelledby="contact-heading"
     >
       <div>
         {/* Hero image with overlay */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-12"
+          className="relative bg-cover bg-center bg-no-repeat h-100 px-6 text-white text-center shadow-lg mb-12 flex items-center justify-center"
           style={{
-            backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.9), rgba(48, 102, 109, 0.9)), url(${AnetteImg2})`,
+            backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.7), rgba(48, 102, 109, 0.7)), url(${AnetteImg2})`,
           }}
         >
           <div className="relative z-10 max-w-xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">Om meg</h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4">
+              Om Anette Therese
+            </h2>
             <p className="text-lg md:text-xl">
               ...og hva jeg kan hjelpe deg med
             </p>
@@ -138,7 +140,7 @@ export default function Contact() {
         </div>
 
         <div
-          className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-14"
+          className="relative max-w-[1200px] mx-auto bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-14"
           style={{
             backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.55), rgba(32, 19, 9, 0.55)), url(${AnetteImg})`,
           }}
@@ -212,7 +214,7 @@ export default function Contact() {
         </form>
 
         <div
-          className="relative bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-12 mt-12"
+          className="relative max-w-[1200px] mx-auto bg-cover bg-center bg-no-repeat py-20 px-6 text-white text-center rounded-2xl shadow-lg mb-12 mt-12"
           style={{
             backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.9), rgba(48, 102, 109, 0.9)), url(${SocialsImgBg})`,
           }}

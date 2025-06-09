@@ -20,6 +20,7 @@ function ShareButton({ label = "Kopier lenke" }) {
   return (
     <button
       onClick={handleCopy}
+      type="button"
       className="flex items-center gap-2 px-4 py-2 rounded  text-dark-green hover:text-cyan-dark hover:scale-110 transition cursor-pointer"
       aria-label="Kopier lenken til dette prosjektet"
     >

@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function ProductCard({ title, description, image, hoverImage, link, icons = [] }) {
+function ProductCard({
+  title,
+  description,
+  image,
+  hoverImage,
+  link,
+  icons = [],
+}) {
   const [isHovered, setIsHovered] = useState(false);
 
   const isVideo = hoverImage && hoverImage.endsWith(".mp4");
@@ -47,8 +54,8 @@ function ProductCard({ title, description, image, hoverImage, link, icons = [] }
         {/* Tech icons row */}
         {icons.length > 0 && (
           <div className="flex gap-2 pt-4 text-xl text-dark-green">
-            {icons.map((IconComponent, index) => (
-              <IconComponent key={index} />
+            {icons.map((IconComponent) => (
+              <IconComponent key={IconComponent.name} />
             ))}
           </div>
         )}

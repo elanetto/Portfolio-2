@@ -40,6 +40,15 @@ To add to the site, I added animated timelines for my work experience and educat
 
 ![image](https://raw.githubusercontent.com/elanetto/Portfolio-2/refs/heads/main/src/assets/readme-img/readme-timeline.jpg)
 
+## Future ideas for enhancing this project
+- Add more portolio projects
+- Edit and enhance the portfolio projects used
+- Add Graphic Design gallery portfolio
+- Add Stickers and drawings to make it playful and unique
+- Add drawings to the footer
+- Add teaser video of me and my work
+- Take new photos of me to use
+
 
 # 🌿 How to fork and use this project yourself 🌿 
 

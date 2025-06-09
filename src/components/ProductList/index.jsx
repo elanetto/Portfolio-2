@@ -2,19 +2,19 @@ import ProductCard from "./../ProductCard";
 import TechIcons from "./../Icons/TechIcons";
 import HolidazeImg from "../../assets/portfolio/card/Holidaze-1.jpg";
 import HolidazeHover from "../../assets/portfolio/card/Holidaze-hover-video.mp4";
-import AuctionHouseImg from "../../assets/portfolio/card/AuctionHouse-1.jpg";
-import AuctionHouseHover from "../../assets/portfolio/card/AuctionHouseVideo-hover.mp4";
-import eShopImg from "../../assets/portfolio/card/eShop-1.jpg";
-import eShopHover from "../../assets/portfolio/card/eShop-video-hover.mp4";
+import AuctionHouseImg from "../../assets/portfolio/card/new-AuctionHouse-1.jpg";
+import AuctionHouseHover from "../../assets/portfolio/card/new-AuctionHouseVideo-hover.mp4";
+import eShopImg from "../../assets/portfolio/card/new-eShop-1.jpg";
+import eShopHover from "../../assets/portfolio/card/new-eShop-video-hover.mp4";
 
 const holidazeText =
-  "En booking nettside: Søk, book eller legg ut dine egne venues. Jeg har lagd en whimsical og leken nettsidedesign, og bygd en sofistikert søkemotor. Bygd med fokus på tilgjengelighet.";
+  "En bookingside hvor du kan søke, booke eller publisere egne fritidssteder. Nettsiden inviterer til oppdagelse gjennom lekne farger og detaljer.";
 
 const auctionHouseText =
-  "En auksjonsnettside hvor man kan søke, by på og delta på auksjoner. Man kan også legge ut egne produkter. WAP-vennlig design. Lag din egen bruker for å delta på auksjoner.";
+  "Auction House er en responsiv auksjonsplattform hvor du kan søke, by og delta på auksjoner – eller legge ut dine egne produkter for salg. Opprett en bruker og bli med i budrunden!";
 
 const eShopText =
-  "Et e-handelsnettsted hvor man kan søke etter produkter og 'kjøpe' dem. Brukervennlig kasse-system og enkel åpning av produkter. Skreddersydd for mobil og nettbrett.";
+  "Et e-handelsnettsted hvor du kan utforske produkter og legge dem i handlekurven. Løsningen har et brukervennlig og intuitivt kassesystem, og gir en sømløs opplevelse.";
 
 function ProductList() {
   return (

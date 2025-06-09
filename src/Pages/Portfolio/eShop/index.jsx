@@ -1,7 +1,7 @@
 import PortfolioLayout from "./../../../Layout/PortfolioLayout";
-import eShopImg1 from "./../../../assets/portfolio/card/eShop-1.jpg";
-import eShopImg2 from "./../../../assets/portfolio/card/eShop-2.jpg";
-import eShopImg3 from "./../../../assets/portfolio/card/eShop-3.jpg";
+import eShopImg1 from "./../../../assets/portfolio/card/new-eShop-1.jpg";
+import eShopImg2 from "./../../../assets/portfolio/card/new-eShop-2.jpg";
+import eShopImg3 from "./../../../assets/portfolio/card/new-eShop-3.jpg";
 import TechIcons from "./../../../components/Icons/TechIcons";
 
 function Nettbutikk() {
@@ -14,10 +14,10 @@ function Nettbutikk() {
         
         `}
       reflections={`
-        
-        Dette prosjektet er det første React-prosjektet jeg har gjort med en gitt API. Det viktigste med dette prosjektet var å få koden til å fungere: Altså at nettsiden skulle fungere i forhold til søking og kjøping av de 25 tilgjengelige produktene.
 
-        I ettertid er mitt største forbedringspotensial i dette prosjektet designen av nettsiden. Blåfargen får siden til å se halvferdig ut.
+        Dette prosjektet var mitt første React-prosjekt bygget med et gitt API. Hovedfokuset var å få selve funksjonaliteten på plass – spesielt søkefunksjon og kjøpsflyt for de 25 tilgjengelige produktene. Underveis lærte jeg mye om komponentbasert utvikling, state management og hvordan man kan strukturere logikk og brukergrensesnitt i React.
+
+Designet er senere oppdatert med et mer moderne og stilrent uttrykk. Den opprinnelige blåfargen (som er like forhatt innen webdesign som fonten Comic Sans er i grafisk design) ble byttet ut med en mer gjennomtenkt fargepalett. Det nye designet legger større vekt på produktbildene, og brukerne har nå mulighet til å klikke på bildene for å vise dem i større format – i tråd med dagens designstandarder.
         
         `}
       images={[eShopImg1, eShopImg2, eShopImg3]}

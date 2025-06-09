@@ -15,13 +15,17 @@ function HomeHeroTwo() {
   }, []);
 
   return (
-    <section
-      className="min-h-[450px] flex flex-col justify-center items-center text-white text-center px-6 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0), rgba(32, 19, 9, 0)), url(${headerImage})`,
-      }}
-    >
-      <div className="h-full flex items-center lg:pl-6 container">
+    <section className="relative min-h-[450px] flex flex-col justify-center items-center text-white text-center overflow-hidden">
+      {/* Background Image */}
+      <img
+        src={headerImage}
+        alt="Anette Therese Hero"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0"
+        fetchPriority="high"
+      />
+
+      {/* Text content */}
+      <div className="relative z-20 h-full flex items-center lg:pl-6 container">
         <div className="text-white px-4 md:px-12 max-w-[550px] text-left">
           <h1
             id="hero-heading"

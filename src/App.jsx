@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import HomeHero from "./components/HomeHero";
+import HomeHeroTwo from "./components/HomeHero/HeroTwo.jsx";
 import InfoCards from "./components/InfoCards";
 import ProductList from "./components/ProductList";
 import CVTimeline from "./components/CV/TimelineCV.jsx";
@@ -20,8 +20,8 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen w-full container mx-auto">
-        <HomeHero />
+      <div className="min-h-screen w-full mx-auto">
+        <HomeHeroTwo />
         <InfoCards />
         <ProductList />
         <ContactCTA />

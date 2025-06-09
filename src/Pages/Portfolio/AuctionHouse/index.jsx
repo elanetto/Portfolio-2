@@ -1,7 +1,7 @@
 import PortfolioLayout from "./../../../Layout/PortfolioLayout";
-import AuctionHouseImg1 from "./../../../assets/portfolio/card/AuctionHouse-1.jpg";
-import AuctionHouseImg2 from "./../../../assets/portfolio/card/AuctionHouse-2.jpg";
-import AuctionHouseImg3 from "./../../../assets/portfolio/card/AuctionHouse-3.jpg";
+import AuctionHouseImg1 from "./../../../assets/portfolio/card/new-AuctionHouse-1.jpg";
+import AuctionHouseImg2 from "./../../../assets/portfolio/card/new-AuctionHouse-2.jpg";
+import AuctionHouseImg3 from "./../../../assets/portfolio/card/new-AuctionHouse-3.jpg";
 import AuctionHouseImg4 from "./../../../assets/portfolio/card/AuctionHouse-4.jpg";
 import TechIcons from "./../../../components/Icons/TechIcons";
 
@@ -14,13 +14,13 @@ function AuctionHouse() {
     Målet var å bygge en fullverdig nettapplikasjon hvor brukere kan opprette, by på og administrere auksjoner – kun ved bruk av HTML, JavaScript, og en valgt CSS-rammeverk. Jeg valgte å bruke Tailwind CSS og Vite for å optimalisere utviklingsflyten.
     
     `}
-      reflections={`Når jeg ser over denne oppgaven bare et halvt år senere, så har jeg vokst så mye som utvikler at jeg ser flere muligheter for å løfte dette til et mye bedre prosjekt.
+      reflections={`Da dette prosjektet først ble satt sammen, klarte jeg å krasje hele Noroffs API med måten det ble brukt på. I etterkant har jeg gått inn i koden og rettet opp både paginering, søkefunksjon og "Hottest item"-komponenten, slik at produktene nå hentes inn på riktig måte.
 
-        Prosjektet kunne med fordel ha brukt APIen bedre med både søkemotor og innhenting av alle produkter.
+Prosjektet kunne blitt enda bedre – og fått flere muligheter – dersom det hadde blitt bygget med komponenter i React. Da kunne jeg også benyttet meg av mer av det jeg liker aller best med React: NPM-økosystemet. Ferdige komponenter som Rich Text Editor, Toastify og Carousel gjør det både morsommere og mer effektivt å utvikle.
 
-        I tillegg skulle alle brukere ha fått sett på sin side hvilke auctions de aktivt byr på nå.
+Jeg har lært mye av å jobbe med dette prosjektet – både om hva man bør gjøre, og hva man bør unngå.
 
-        Prosjektet ville også ha hatt en bedre flyt om det var bygd med komponenter i React, heller enn i ren JavaScript.`}
+      `}
       images={[
         AuctionHouseImg1,
         AuctionHouseImg2,

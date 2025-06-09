@@ -36,7 +36,9 @@ function PortfolioLayout({
             <div
               key={index}
               onClick={() => setSelectedImage(img)}
-              onKeyDown={(e) => e.key === "Enter" && setSelectedImage(img)}
+              onKeyDown={(e) =>
+                (e.key === "Enter" || e.key === " ") && setSelectedImage(img)
+              }
               role="button"
               tabIndex={0}
               className="cursor-zoom-in"

@@ -104,7 +104,7 @@ function PortfolioLayout({
             rel="noopener noreferrer"
             className="hover:bg-gray-800 hover:text-white bg-cyan-blue text-black hover:scale-105 px-4 py-2 rounded hover:bg-opacity-80 transition cursor-pointer"
           >
-            Les mer i GitHub Repo
+            GitHub Repo
           </a>
         )}
       </div>

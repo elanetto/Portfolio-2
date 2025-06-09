@@ -77,9 +77,7 @@ function PortfolioLayout({
           </p>
           <div className="flex gap-4 flex-wrap text-2xl text-dark-green">
             {icons.map((Icon, index) => (
-              <div key={index}>
-                <Icon />
-              </div>
+              <Icon key={`icon-${index}`} />
             ))}
           </div>
         </div>

@@ -54,8 +54,8 @@ function ProductCard({
         {/* Tech icons row */}
         {icons.length > 0 && (
           <div className="flex gap-2 pt-4 text-xl text-dark-green">
-            {icons.map((IconComponent, index) => (
-              <IconComponent key={`${IconComponent.name}-${index}`} />
+            {icons.map((Icon, index) => (
+              <Icon key={`icon-${index}`} />
             ))}
           </div>
         )}

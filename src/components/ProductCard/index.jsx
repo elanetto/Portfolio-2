@@ -46,7 +46,7 @@ function ProductCard({ title, description, image, hoverImage, link, icons = [] }
 
         {/* Tech icons row */}
         {icons.length > 0 && (
-          <div className="flex gap-2 text-xl text-dark-green">
+          <div className="flex gap-2 pt-4 text-xl text-dark-green">
             {icons.map((IconComponent, index) => (
               <IconComponent key={index} />
             ))}

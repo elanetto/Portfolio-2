@@ -130,7 +130,7 @@ export default function Contact() {
               lidenskap for god design og brukeropplevelse.
             </p>
             <p>
-              Jeg elsker å skape noe nytt, og bruker fritiden på å drive en egen
+              Jeg har stor skaperglede, og bruker fritiden på å drive en egen
               klistremerkebutikk, samt at jeg liker å lese og å spille
               videospill.
             </p>

@@ -21,12 +21,13 @@ function Holidaze() {
         `}
       images={[HolidazeImg1, HolidazeImg2, HolidazeImg3]}
       icons={[
-        TechIcons.react,
-        TechIcons.tailwind,
-        TechIcons.javascript,
-        TechIcons.vite,
-        TechIcons.html5,
         TechIcons.github,
+        TechIcons.vite,
+        TechIcons.react,
+        TechIcons.javascript,
+        TechIcons.tailwind,
+        TechIcons.html5,
+        TechIcons.figma,
       ]}
       liveLink="https://dev-holiday.onrender.com/"
       githubLink="https://github.com/elanetto/Holiday"

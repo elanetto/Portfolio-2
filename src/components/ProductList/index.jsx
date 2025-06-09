@@ -39,6 +39,7 @@ function ProductList() {
             TechIcons.javascript,
             TechIcons.tailwind,
             TechIcons.html5,
+            TechIcons.figma,
           ]}
         />
         <ProductCard
@@ -50,10 +51,10 @@ function ProductList() {
           icons={[
             TechIcons.github,
             TechIcons.vite,
-            TechIcons.react,
             TechIcons.javascript,
             TechIcons.tailwind,
             TechIcons.html5,
+            TechIcons.figma,
           ]}
         />
         <ProductCard

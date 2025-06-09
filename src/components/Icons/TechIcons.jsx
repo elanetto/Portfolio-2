@@ -1,5 +1,5 @@
 import { FaReact, FaHtml5, FaGithub, FaCode } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss, SiVite } from "react-icons/si";
+import { SiJavascript, SiTailwindcss, SiVite, SiFigma } from "react-icons/si";
 import TooltipWrapper from "./../TooltipWrapper";
 
 const TechIcons = {
@@ -36,6 +36,11 @@ const TechIcons = {
   vite: () => (
     <TooltipWrapper text="Vite">
       <SiVite />
+    </TooltipWrapper>
+  ),
+  figma: () => (
+    <TooltipWrapper text="Figma">
+      <SiFigma />
     </TooltipWrapper>
   ),
 };

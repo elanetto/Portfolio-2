@@ -27,12 +27,13 @@ This project was created using these tools and technologies:
 - Figma
 
 ## React NPM Packages
-- [Toast](https://www.npmjs.com/package/react-toastify)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [Framer Motion](https://motion.dev/)
-- [emailjs](https://www.emailjs.com/)
-- [confetti](https://www.npmjs.com/package/react-canvas-confetti)
-- [Carousel](https://www.npmjs.com/package/react-responsive-carousel)
+- [Toast](https://www.npmjs.com/package/react-toastify) --> Alerts
+- [React Icons](https://react-icons.github.io/react-icons/) --> Icons
+- [Lucide React](https://www.npmjs.com/package/lucide-react) --> Icons
+- [Framer Motion](https://motion.dev/) --> Smooth animations
+- [emailjs](https://www.emailjs.com/) --> Send emails to me througha contact form
+- [confetti](https://www.npmjs.com/package/react-canvas-confetti) --> Festive confetti
+- [Carousel](https://www.npmjs.com/package/react-responsive-carousel) --> Responsive image carousel
 
 ## Extras
 To add to the site, I added animated timelines for my work experience and education. This was to enhance both the experience and the value of the site.

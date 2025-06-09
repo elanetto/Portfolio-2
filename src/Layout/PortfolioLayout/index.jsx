@@ -76,8 +76,8 @@ function PortfolioLayout({
             utviklingsverktøy:
           </p>
           <div className="flex gap-4 flex-wrap text-2xl text-dark-green">
-            {icons.map((Icon) => (
-              <div key={Icon.name}>
+            {icons.map((Icon, index) => (
+              <div key={index}>
                 <Icon />
               </div>
             ))}

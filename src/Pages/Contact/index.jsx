@@ -86,9 +86,9 @@ export default function Contact() {
       <div>
         {/* Hero image with overlay */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat h-100 px-6 text-white text-center shadow-lg mb-12 flex items-center justify-center"
+          className="relative bg-cover bg-center bg-no-repeat h-[25rem] px-6 text-white text-center shadow-lg mb-12 flex items-center justify-center"
           style={{
-            backgroundImage: `linear-gradient(to top, rgba(108, 118, 74, 0.7), rgba(48, 102, 109, 0.7)), url(${AnetteImg2})`,
+            backgroundImage: `linear-gradient(to bottom, rgba(50, 138, 64, 0.7), rgba(48, 102, 109, 0.7)), url(${AnetteImg2})`,
           }}
         >
           <div className="relative z-10 max-w-xl mx-auto">
